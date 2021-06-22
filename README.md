@@ -1,5 +1,5 @@
 # online-store
- 1. Features
+ 1. **Features**
    * Login form
    * Search bar
    * Nav bar
