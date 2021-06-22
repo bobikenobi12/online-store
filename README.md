@@ -29,12 +29,16 @@
     - with *Skrill*
     - with *Credit cards*
 8. `Accounts` :
-    - # `User account` 
+    - `User account` :
     - can *add* items to basket 
     - can *remove* items from basket
     - can *go to* checkout
     - can *make* a review
-    - # `Seller account`
+    - `Seller account` :
     - *add* items to the market
     - *change* prices
     - *change* product description/title
+    -  `Admin account` :
+    - *remove* products from the market
+    - *change* product description/title
+    - *report* sellers
