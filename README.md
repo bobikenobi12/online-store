@@ -1,4 +1,4 @@
-# online-store
+# Project Vain
  ## Features
 1. `Login form`:
   - with `Github`
