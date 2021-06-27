@@ -4,23 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="login.css" />
     <title>Vain login</title>
   </head>
   <body>
     <form class="login-form">
-      <h1 id="title">LOGIN</h1>
+      <h1 id="title"><strong>LOGIN</strong></h1>
       <input class="email" type="text" placeholder="Email" />
       <p class="error">Error message</p>
       <input class="password" type="password" placeholder="Password" />
       <p class="error">Error message</p>
       <div class="check">
-      <input type="checkbox" name="check" />
-      <label for="check">Remember me</label>
-    </div>
+        <input type="checkbox" name="check" />
+        <label for="check"><strong>Remember me</strong></label>
+      </div>
       <button class="log" type="button">Login</button>
-      <a href="#">Create new account</a>
-      <a href="#">Forgot password?</a>
+      <div class="links">
+      <a href="#" class="account" >Create new account</a>
+      <a href="#" class="forgot-pass" >Forgot password?</a>
+    </div>
     </form>
   </body>
 </html>

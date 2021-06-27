@@ -10,49 +10,82 @@ body {
   height: 100vh;
 }
 .login-form {
-background-image: linear-gradient(to right, #FA5834, #AC59FF);
-border-radius: 15px;
-height: 400px;
-width: 400px;
+  background-image: linear-gradient(to right, #FA5834, #AC59FF);
+  border-radius: 20px;
+  height: 413px;
+  width: 400px;
 }
 #title {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 40px;
+  color: white;
+  font-size: 36px;
 }
 .check {
   display: block;
+  margin-left: 50px;
+  font-size: 13px;
+  color: white;
+  margin-bottom: 15px;
 }
 .log {
-display: block;
+  display: block;
+  width: 170px;
+  height: 50px;
+  border-radius: 15px;
+  border-style: none;
+  margin: 0 auto;
+  font-size: 24px;
+  color: #7D72FF;
 }
 .error {
   display: block;
-  margin-bottom: 15px;
-  margin-left: 75px;
-  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-top: 10px;
+  font-style: italic;
+  color: white;
+  font-size: 14px;
 }
 .email {
-  height: 35px;
+  height: 50px;
   border-radius: 10px;
   border-style: none;
-  width: 250px;
+  width: 300px;
   text-align: center;
   position: relative;
   display: block;
-  margin : 0 auto;
+  margin: 0 auto;
   font-size: 15px;
   outline: none;
+  color: #A49797;
 }
 .password {
-  height: 35px;
+  height: 50px;
   border-radius: 10px;
   border-style: none;
-  width: 250px;
+  width: 300px;
   text-align: center;
   position: relative;
   display: block;
-  margin : 0 auto;
+  margin: 0 auto;
   font-size: 15px;
   outline: none;
+  color: #A49797;
+}
+.links {
+  justify-content: space-between;
+  text-align: center;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+.account {
+  text-align: right;
+ float: left;
+}
+.forgot-pass {
+  float: right;
+  
 }
