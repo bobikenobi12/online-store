@@ -85,9 +85,11 @@ body {
   text-align: right;
   float: left;
   color: #fff;
+  text-decoration: none;
 }
 .forgot-pass {
   float: right;
   text-align: left;
   color: #fff;
+  text-decoration: none;
 }
