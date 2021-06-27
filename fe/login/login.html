@@ -9,14 +9,16 @@
   </head>
   <body>
     <form class="login-form">
-      <h1>LOGIN</h1>
-      <input type="text" placeholder="Email" />
-      <p>Error text</p>
-      <input type="password" placeholder="Password" />
-      <p>Error text</p>
+      <h1 id="title">LOGIN</h1>
+      <input class="email" type="text" placeholder="Email" />
+      <p class="error">Error message</p>
+      <input class="password" type="password" placeholder="Password" />
+      <p class="error">Error message</p>
+      <div class="check">
       <input type="checkbox" name="check" />
       <label for="check">Remember me</label>
-      <button type="button">Login</button>
+    </div>
+      <button class="log" type="button">Login</button>
       <a href="#">Create new account</a>
       <a href="#">Forgot password?</a>
     </form>

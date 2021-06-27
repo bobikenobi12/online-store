@@ -7,6 +7,52 @@ body {
   display: grid;
   align-items: center;
   justify-items: center;
+  height: 100vh;
 }
 .login-form {
+background-image: linear-gradient(to right, #FA5834, #AC59FF);
+border-radius: 15px;
+height: 400px;
+width: 400px;
+}
+#title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.check {
+  display: block;
+}
+.log {
+display: block;
+}
+.error {
+  display: block;
+  margin-bottom: 15px;
+  margin-left: 75px;
+  margin-top: 15px;
+}
+.email {
+  height: 35px;
+  border-radius: 10px;
+  border-style: none;
+  width: 250px;
+  text-align: center;
+  position: relative;
+  display: block;
+  margin : 0 auto;
+  font-size: 15px;
+  outline: none;
+}
+.password {
+  height: 35px;
+  border-radius: 10px;
+  border-style: none;
+  width: 250px;
+  text-align: center;
+  position: relative;
+  display: block;
+  margin : 0 auto;
+  font-size: 15px;
+  outline: none;
 }
