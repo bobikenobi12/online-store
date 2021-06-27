@@ -10,7 +10,7 @@ body {
   height: 100vh;
 }
 .login-form {
-  background-image: linear-gradient(to right, #FA5834, #AC59FF);
+  background-image: linear-gradient(to right, #fa5834, #ac59ff);
   border-radius: 20px;
   height: 413px;
   width: 400px;
@@ -37,7 +37,7 @@ body {
   border-style: none;
   margin: 0 auto;
   font-size: 24px;
-  color: #7D72FF;
+  color: #7d72ff;
 }
 .error {
   display: block;
@@ -59,7 +59,7 @@ body {
   margin: 0 auto;
   font-size: 15px;
   outline: none;
-  color: #A49797;
+  color: #a49797;
 }
 .password {
   height: 50px;
@@ -72,7 +72,7 @@ body {
   margin: 0 auto;
   font-size: 15px;
   outline: none;
-  color: #A49797;
+  color: #a49797;
 }
 .links {
   justify-content: space-between;
@@ -83,9 +83,11 @@ body {
 }
 .account {
   text-align: right;
- float: left;
+  float: left;
+  color: #fff;
 }
 .forgot-pass {
   float: right;
-  
+  text-align: left;
+  color: #fff;
 }
