@@ -6,23 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="login.css" />
     <title>Vain login</title>
+    <script src="login.js"></script>
   </head>
   <body>
     <form class="login-form">
-      <h1 id="title"><strong>Sign in</strong></h1>
-      <input class="email" type="text" placeholder="Email" />
-      <p class="error">Error message</p>
-      <input class="password" type="password" placeholder="Password" />
-      <p class="error">Error message</p>
-      <div class="check">
-        <input type="checkbox" name="check" />
+      <h1 class="page-title">Sign in</h1>
+      <input class="form-field" type="text" placeholder="Email" />
+      <p class="form-error">Error message</p>
+      <input class="form-field" type="password" placeholder="Password" />
+      <p class="form-error">Error message</p>
+      <div class="form-checkbox">
+        <input class="checkbox-input"type="checkbox" name="check" />
         <label for="check"><strong>Remember me</strong></label>
       </div>
-      <button class="log" type="button">Sign in</button>
+      <button class="form-button" type="button">Sign in</button>
       <div class="links">
-      <a href="/fe/signup/signup.html" class="account" >Create new account</a>
-      <a href="#" class="forgot-pass" >Forgot password?</a>
-    </div>
+        <a href="/fe/signup/signup.html" class="form-link">Create new account</a>
+        <a href="#" class="form-link">Forgot password?</a>
+      </div>
     </form>
   </body>
 </html>
