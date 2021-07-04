@@ -16,31 +16,18 @@ body {
   background-image: linear-gradient(to right, #fa5834, #ac59ff);
   border-radius: 20px;
   padding: 40px;
-  min-width: 400px;
+  min-width: 350px;
 }
 .page-title {
   text-align: center;
   font-weight: bold;
   color: white;
   font-size: 36px;
-}
-.form-checkbox {
-  display: flex;
-  align-items: center;
-  font-size: 13px;
-  color: white;
-}
-.checkbox-input {
-  margin-right: 3px;
-}
-.form-error {
-  display: block;
-  font-style: italic;
-  color: white;
-  font-size: 14px;
+  margin-bottom: 10px;
 }
 .form-field {
   padding: 10px;
+  margin: 10px 0px;
   border-radius: 10px;
   border-style: none;
   font-size: 15px;
@@ -48,9 +35,26 @@ body {
   color: #a49797;
   width: 100%;
 }
+.form-error {
+  font-style: italic;
+  color: white;
+  font-size: 14px;
+}
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px 15px 0px;
+  font-size: 13px;
+  color: white;
+}
+.checkbox-input {
+  margin-right: 3px;
+}
 .form-button {
-  padding: 5px 15px;
-  min-width: 100px;
+  display: block;
+  margin: 0 auto;
+  padding: 8px 15px;
+  min-width: 120px;
   border-radius: 15px;
   border-style: none;
   font-size: 24px;
@@ -63,6 +67,7 @@ body {
 .links {
   display: flex;
   justify-content: space-between;
+  margin-top: 15px;
 }
 .form-link {
   color: #fff;
