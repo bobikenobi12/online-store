@@ -1,83 +1,65 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  body {
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    height: 100vh;
-  }
-  .login-form {
-    background-image: linear-gradient(to right, #215FFF, #04D2FF);
-    border-radius: 20px;
-    height: 413px;
-    width: 400px;
-  }
-  #title {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    color: white;
-    font-size: 36px;
-  }
-  .log {
-    display: block;
-    width: 170px;
-    height: 50px;
-    border-radius: 15px;
-    border-style: none;
-    margin: 0 auto;
-    font-size: 24px;
-    color: #7d72ff;
-  }
-  .error {
-    display: block;
-    margin-bottom: 20px;
-    margin-left: 50px;
-    margin-top: 10px;
-    font-style: italic;
-    color: white;
-    font-size: 14px;
-  }
-  .email {
-    height: 50px;
-    border-radius: 10px;
-    border-style: none;
-    width: 300px;
-    text-align: center;
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    font-size: 15px;
-    outline: none;
-    color: #a49797;
-  }
-  .password {
-    height: 50px;
-    border-radius: 10px;
-    border-style: none;
-    width: 300px;
-    text-align: center;
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    font-size: 15px;
-    outline: none;
-    color: #a49797;
-  }
-  /* .links {
-    justify-content: space-between;
-    text-align: center;
-    margin-right: 15px;
-    margin-left: 15px;
-    margin-top: 15px;
-  } */
-  .account {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.signup-form {
+  background-image: linear-gradient(to right, #215FFF, #04D2FF);
+  border-radius: 20px;
+  padding: 40px;
+  min-width: 350px;
+}
+.page-title {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.form-field {
+  padding: 10px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 15px;
+  outline: none;
+  color: #a49797;
+  width: 100%;
+}
+.form-error {
+  font-style: italic;
+  color: white;
+  font-size: 14px;
+}
+.form-button {
+  display: block;
+  margin: 10px auto;
+  padding: 8px 15px;
+  min-width: 120px;
+  border-radius: 15px;
+  border-style: none;
+  font-size: 24px;
+  color: #7d72ff;
+}
+.form-button:hover {
+  background: #e5e5e5;
+  cursor: pointer;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.form-link {
+  color: #fff;
+  text-decoration: none;
+}
