@@ -20,7 +20,7 @@
   <body>
     <nav class="nav-bar">
       <div class="primary-nav">
-        <a class="nav-logo" href="#"
+        <a class="nav-logo" href="/fe/main/main.html"
           ><img
             class="nav-logo-image"
             src="http://placekitten.com/135/35"
@@ -37,9 +37,11 @@
           </button>
         </form>
         <span class="dropdown">
+          <div class="dropdown-head">
           <i class="fas fa-user text-color-blue"></i>
           <span class="dropdown-title">My account</span>
           <i class="fas fa-caret-down"></i>
+          </div>
           <div class="dropdown-main">
             <div class="dropdown-header">
               <i class="fas fa-user-tie text-color-blue"></i>
@@ -50,14 +52,29 @@
                 <i class="fas fa-forward text-color-blue"></i>
                 <span class="footer-text">Sign in</span>
               </a>
-              <a href="/fe/signup/signup.html" class="footer-signup">New account</a>
+              <a href="/fe/signup/signup.html" class="footer-signup"
+                >New account</a
+              >
             </div>
           </div>
         </span>
         <span class="dropdown">
+          <div class="dropdown-head">
           <i class="fas fa-shopping-cart text-color-blue"></i>
           <span class="dropdown-title">Shopping cart</span>
           <i class="fas fa-caret-down"></i>
+        </div>
+        <div class="dropdown-main-cart">
+          <div class="dropdown-header-cart">
+            <span>No products added to shopping cart</span>
+          </div>
+          <div class="dropdown-footer-cart">
+            <a href="/fe/shopping-cart/cart.html" class="footer-cart">
+              <i class="fas fa-forward text-color-blue"></i>
+              <span class="footer-text-cart">View shopping cart</span>
+            </a>
+          </div>
+        </div>
         </span>
       </div>
       <ul class="secondary-nav">

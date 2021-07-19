@@ -50,6 +50,8 @@ body {
   position: relative;
   font-size: 14px;
   align-items: center;
+}
+.dropdown-head {
   cursor: pointer;
 }
 .dropdown .fas:first-of-type {
@@ -59,16 +61,29 @@ body {
   margin: 0px 5px 0px 10px;
 }
 .dropdown-main {
-  margin: 5px 0px 0px 0px;
+  margin: 2px 0px 0px 0px;
   display: none;
   position: absolute;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 3px;
   min-width: 300px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
-.dropdown:hover .dropdown-main {
+.dropdown-main-cart {
+  margin: 2px 0px 0px 0px;
+  display: none;
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  min-width: 230px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.dropdown:hover .dropdown-main{
   display: block;
+}
+.dropdown:hover .dropdown-main-cart {
+  display: block;
+  right: 2px;
 }
 .dropdown-header {
   display: flex;
@@ -76,6 +91,14 @@ body {
   padding: 12px 16px;
   background-color: #fff;
   display: block;
+  cursor: default;
+}
+.dropdown-header-cart {
+  display: block;
+  text-align: center;
+  padding: 10px 11px 5px 11px;
+  background-color: #fff;
+  cursor: default;
 }
 .header-text {
   padding-left: 5px;
@@ -88,31 +111,51 @@ body {
   text-decoration: none;
   background-color: #e1e1e1;
 }
-.footer-login {
+.dropdown-footer-cart {
+  display: flex;
+  justify-content: center;
+  padding: 8px 12px;
+  background-color: #fff;
+}
+.footer-login{
   display: flex;
   align-items: center;
-  background-color: #215FFF;
+  background-color: #215fff;
   text-decoration: none;
+  cursor: pointer;
+}
+.footer-cart {
+  display: flex;
+  align-items: center;
+  min-width: 225px;
+  background-color: #215fff;
+  text-decoration: none;
+  cursor: pointer;
 }
 .fa-forward {
   border-radius: 0px 2px 20px 0px;
   background-color: #fa5834;
   color: #fff;
-  padding: 3px 8px 3px 8px; 
+  padding: 3px 8px 3px 8px;
   border: 1px solid #fa5834;
- }
+}
 .footer-text {
-  border-radius: 0px 0px 0px 0px;
-  background-color: #215FFF;
+  background-color: #215fff;
   color: #fff;
   padding-left: 15px;
   margin-right: 20px;
 }
+.footer-text-cart {
+  background-color: #215fff;
+  color: #fff;
+  margin-left: 22px;
+}
 .footer-signup {
   margin-left: 30px;
   text-decoration: none;
-  color: #215FFF;
-} 
+  color: #215fff;
+  cursor: pointer;
+}
 .footer-signup:hover {
   text-decoration: underline;
   color: black;
