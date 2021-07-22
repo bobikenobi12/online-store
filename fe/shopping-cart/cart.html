@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cart.css" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/4d990b3ec8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="empty-cart">
+      <div><h1 class="title">Your shopping cart is empty</h1></div>
+      <a class="home-page-button" href="/fe/main/main.html">Go to home page</a>
+    </div>
+    <div class="align">
+    <div class="item-container">
+      <div class="product">
+        <img
+            class="product-img"
+            src="http://placekitten.com/120/120"
+            alt="logo"
+        />
+        <div class="product-title-container">
+        <a href="#" class="product-name"><h2>Name of product</h2></a>
+        <div class="product-description">
+            <span>Availability: Available</span>
+            <span>Warranty: 24 months</span>
+            </div>
+          </div>
+          <div class="quantity-of-product">
+            <select id="quantity">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <span>quantity</span>
+          </div>
+          <div class="price-main">
+            <div class="prices">
+            <span class="money-int">286</span>
+            <span class="money-decimal">80</span>
+            <span class="money-currency">bgn.</span>
+          </div>
+            <a href="#" class="remove-link">Remove</a>
+          </div>
+      </div>
+      <div class="cart-summary">
+        <span>Summary:</span>
+        <span class="money-int">286</span>
+        <span class="money-decimal">80</span>
+        <span class="money-currency">bgn.</span>
+      </div>
+    </div>
+    <div class="cart-checkout">
+      <div style="padding:10px 15px;" >
+      <div class="checkout-main">
+        <div class="order-summary">
+          <span class="order-title"><h2>Information about your order</h2></span>
+          <div class="order-price">
+            <span>Price:</span>
+           <div>
+            <span class="money-int">286</span>
+        <span class="money-decimal">80</span>
+        <span class="money-currency">bgn.</span>
+      </div>
+      </div>
+          </div>
+          <div class="order-tax">
+            <span>Delivery fee:</span>
+            <span class="delivery-fee">FREE</span>
+          </div>
+        </div>
+        <div class="separater"></div>
+        <div class="forward-button">
+          <a href="/fe/shopping-cart/cart.html" class="forward">
+            <i class="fas fa-forward"></i>
+            <span class="button-text">Checkout</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
