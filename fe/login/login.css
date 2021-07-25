@@ -11,65 +11,102 @@ body {
   display: grid;
   align-items: center;
   justify-items: center;
+  font-family: "Roboto", sans-serif;
 }
-.login-form {
-  background-image: linear-gradient(to right, #fa5834, #ac59ff);
-  border-radius: 20px;
-  padding: 40px;
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-width: 350px;
+  border: 1px solid #8e8e8e;
+  margin: 0px 0px 10px 0px;
+  padding: 10px 0px;
+  background-color: #fff;
 }
-.page-title {
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  font-size: 36px;
-  margin-bottom: 10px;
+.site-name {
+  color: #262626;
+  margin: 22px 86.5px 12px;
 }
-.form-field {
-  padding: 10px;
-  margin: 10px 0px;
-  border-radius: 10px;
-  border-style: none;
-  font-size: 15px;
-  outline: none;
-  color: #a49797;
-  width: 100%;
+.form-contents {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-width: 350px;
+  row-gap: 5px;
+  margin: 24px 0px 0px;
+  align-items: center;
 }
-.form-error {
-  font-style: italic;
-  color: white;
-  font-size: 14px;
+.inputs {
+  min-width: 260px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: #fafafa;
+  padding: 9px 0px 7px 8px;
 }
-.form-checkbox {
+.sign-in-button {
+  min-width: 270px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background-color: #0095f6;
+  margin: 8px 40px;
+  padding: 5px 15px;
+}
+.separator {
   display: flex;
   align-items: center;
-  margin: 10px 0px 15px 0px;
-  font-size: 13px;
-  color: white;
+  margin: 10px 40px 18px;
 }
-.checkbox-input {
-  margin-right: 3px;
+.separator-text {
+  margin: 0px 18px;
+  font-size: 15px;
+  color: #8e8e8e;
 }
-.form-button {
-  display: block;
-  margin: 0 auto;
-  padding: 8px 15px;
-  min-width: 120px;
-  border-radius: 15px;
-  border-style: none;
-  font-size: 24px;
-  color: #7d72ff;
+.lines {
+  background-color: #dbdbdb;
+  min-width: 100px;
+  height: 1px;
 }
-.form-button:hover {
-  background: #e5e5e5;
+.signin-with-github {
   cursor: pointer;
+  background-color: #fff;
+  border: none;
+  color: #333;
 }
-.links {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
+.fa-github {
+  margin: 0px 0px 8px 0px;
+  font-size: 14px;
 }
-.form-link {
-  color: #fff;
+.sign-in-github {
+  font-size: 14px;
+}
+.forgot-pass-redirect {
   text-decoration: none;
+  font-size: 12px;
+  margin: 12px 0px 0px;
+  color: #00376b;
+}
+.forgot-pass-redirect:hover {
+text-decoration: underline;
+}
+.footer {
+  text-align: center;
+  border: 1px solid #8e8e8e;
+  background-color: #fff;
+  margin: 0px 0px 10px;
+  padding: 10px 0px;
+}
+.footer-content {
+  margin: 10px;
+}
+.footer-text {
+  color: #262626;
+}
+.footer-redirect {
+  text-decoration: none;
+  color: #0095f6;
+}
+.footer-redirect:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }

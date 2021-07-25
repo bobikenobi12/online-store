@@ -5,25 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="login.css" />
-    <script src="https://kit.fontawesome.com/4d990b3ec8.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/4d990b3ec8.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Vain signin</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <form class="login-form">
-      <h1 class="page-title">Sign in</h1>
-      <input class="form-field" type="email" placeholder="Email" required/>
-      <p class="form-error">Error message</p>
-      <input class="form-field" type="password" placeholder="Password" required/>
-      <p class="form-error">Error message</p>
-      <div class="form-checkbox">
-        <input class="checkbox-input"type="checkbox" name="check" />
-        <label for="check"><strong>Remember me</strong></label>
+    <div class="main">
+      <div class="header">
+        <h1 class="site-name">VAIN</h1>
+        <form action="">
+          <div class="form-contents">
+            <input type="email" placeholder="Email" class="inputs" />
+            <input type="password" placeholder="Password" class="inputs" />
+            <button type="button" class="sign-in-button">
+              <div class="sign-in-text">Sign in</div>
+            </button>
+            <div class="separator">
+              <div class="lines"></div>
+              <span class="separator-text">OR</span>
+              <div class="lines"></div>
+            </div>
+            <button class="signin-with-github">
+              <i class="fab fa-github"></i>
+              <span class="sign-in-github-text">Sign in with Github</span>
+            </button>
+            <a href="/fe/forgot-pass/pass.html" class="forgot-pass-redirect"
+              >Forgot password?</a
+            >
+          </div>
+        </form>
       </div>
-      <button class="form-button" type="button">Sign in</button>
-      <div class="links">
-        <a href="/fe/signup/signup.html" class="form-link">Create new account</a>
-        <a href="/fe/forgot-pass/pass.html" class="form-link">Forgot password?</a>
+      <div class="footer">
+        <div class="footer-content">
+          <p class="footer-text">
+            Don't have an account? <a class="footer-redirect" href="/fe/signup/signup.html">Sign up</a>
+          </p>
+        </div>
       </div>
-    </form>
+    </div>
   </body>
 </html>
