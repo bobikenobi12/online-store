@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/fe/main/dropdown.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
       rel="stylesheet"
@@ -37,44 +38,44 @@
           </button>
         </form>
         <span class="dropdown">
-          <div class="dropdown-head">
-          <i class="fas fa-user text-color-blue"></i>
-          <span class="dropdown-title">My account</span>
-          <i class="fas fa-caret-down"></i>
+          <div class="dropdown__head">
+            <i class="fas fa-user text-color-blue"></i>
+            <span class="dropdown__head-title">My account</span>
+            <i class="fas fa-caret-down"></i>
           </div>
-          <div class="dropdown-main">
-            <div class="dropdown-header">
+          <div class="dropdown__main dropdown__main--widthchange">
+            <div class="dropdown__item dropdown__item--header">
               <i class="fas fa-user-tie text-color-blue"></i>
-              <span class="header-text">Sign in to your account!</span>
+              <span class="dropdown__item-text">Sign in to your account!</span>
             </div>
-            <div class="dropdown-footer">
-              <a href="/fe/login/login.html" class="footer-login">
+            <div class="dropdown__item dropdown__item-footer">
+              <a href="/fe/login/login.html" class="dropdown__item-link dropdown__item-link--prominent">
                 <i class="fas fa-forward text-color-blue"></i>
-                <span class="footer-text">Sign in</span>
+                <span class="dropdown__item-link-text">Sign in</span>
               </a>
-              <a href="/fe/signup/signup.html" class="footer-signup"
+              <a href="/fe/signup/signup.html" class="dropdown__item-link"
                 >New account</a
               >
             </div>
           </div>
         </span>
         <span class="dropdown">
-          <div class="dropdown-head">
-          <i class="fas fa-shopping-cart text-color-blue"></i>
-          <span class="dropdown-title">Shopping cart</span>
-          <i class="fas fa-caret-down"></i>
-        </div>
-        <div class="dropdown-main-cart">
-          <div class="dropdown-header-cart">
-            <span>No products added to shopping cart</span>
+          <div class="dropdown__head">
+            <i class="fas fa-shopping-cart text-color-blue"></i>
+            <span class="dropdown__head-title">Shopping cart</span>
+            <i class="fas fa-caret-down"></i>
           </div>
-          <div class="dropdown-footer-cart">
-            <a href="/fe/shopping-cart/cart.html" class="footer-cart">
-              <i class="fas fa-forward text-color-blue"></i>
-              <span class="footer-text-cart">View shopping cart</span>
-            </a>
+          <div class="dropdown__main dropdown__main--reposition">
+            <div class="dropdown__item dropdown__item--head">
+              <span>No products added to shopping cart</span>
+            </div>
+            <div class="dropdown__item dropdown__item--foot">
+              <a href="/fe/shopping-cart/cart.html" class="dropdown__item-link dropdown__item-link--prominent dropdown__item-link--important">
+                <i class="fas fa-forward text-color-blue"></i>
+                <span class="dropdown__item-link-text dropdown__item-link-text--position">View shopping cart</span>
+              </a>
+            </div>
           </div>
-        </div>
         </span>
       </div>
       <ul class="secondary-nav">
