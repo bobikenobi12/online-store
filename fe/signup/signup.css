@@ -60,7 +60,7 @@ body {
 .separator {
   display: flex;
   align-items: center;
-  margin: 10px 40px 18px;
+  margin: 10px 40px 10px;
 }
 .separator-text {
   margin: 0px 18px;
@@ -108,4 +108,12 @@ body {
 .footer-redirect:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .header {
+    border:none;
+  }
+  .footer {
+    border: none;
+  }
 }

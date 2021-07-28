@@ -17,7 +17,7 @@ body{
     flex-direction: column;
     min-width: 350px;
     align-items: center;
-    border: 1px solid #8E8E8E;
+    border: 1px solid #DBDBDB;
 }
 .icon-div {
     margin: 24px 0px 16px;
@@ -44,11 +44,15 @@ body{
 .email-input {
     display: block;
     background-color: #FAFAFA;
-    border: 1px solid #8E8E8E;
+    border: 1px solid #DBDBDB;
+    color: #DBDBDB;
     border-radius: 5px;
     width: 70%;
     padding: 10px 9px;
     font-size: 14px;
+}
+.email-input::placeholder {
+    color: #DBDBDB;
 }
 .confirmation-msg {
     text-align: center;
@@ -87,7 +91,7 @@ body{
     text-decoration: underline;
 }
 .signin-div {
-    border-top: 1px solid #8E8E8E;
+    border-top: 1px solid #DBDBDB;
     text-align: center;
     padding: 10px;
     width: 100%;
