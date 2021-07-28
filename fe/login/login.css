@@ -111,10 +111,7 @@ text-decoration: underline;
   cursor: pointer;
 }
 @media screen and (max-width: 480px) {
-  .header {
+  .header, .footer {
     border:none;
-  }
-  .footer {
-    border: none;
   }
 }
