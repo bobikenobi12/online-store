@@ -11,23 +11,25 @@ body {
   display: grid;
   align-items: center;
   justify-items: center;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.header {
+.container__item {
+  border: 1px solid #8e8e8e;
+  background-color: #fff;
+  margin: 0px 0px 10px;
+  padding: 10px 0px;
+}
+.container__item-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 350px;
-  border: 1px solid #8e8e8e;
-  margin: 0px 0px 10px 0px;
-  padding: 10px 0px;
-  background-color: #fff;
 }
-.site-name {
+.container__item-title {
   color: #262626;
   margin: 22px 86.5px 12px;
 }
-.form-contents {
+.container__item-form {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -36,82 +38,84 @@ body {
   margin: 24px 0px 0px;
   align-items: center;
 }
-.inputs {
+.container__item-form-input {
   min-width: 260px;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
   background-color: #fafafa;
   padding: 9px 0px 7px 8px;
 }
-.sign-in-button {
+.container__item-form-button {
+  border: none;
+  cursor: pointer;
+}
+.container__item-form-button--blue{
   min-width: 270px;
   color: #fff;
-  border: none;
   border-radius: 5px;
   background-color: #0095f6;
   margin: 8px 40px;
   padding: 5px 15px;
 }
-.separator {
+.container__item-form-button-text {
+  font-size: 14px;
+}
+.container__item-form-separator {
   display: flex;
   align-items: center;
   margin: 10px 40px 18px;
 }
-.separator-text {
+.container__item-form-separator-text {
   margin: 0px 18px;
   font-size: 15px;
   color: #8e8e8e;
 }
-.lines {
+.container__item-form-separator-line {
   background-color: #dbdbdb;
   min-width: 100px;
   height: 1px;
 }
-.signin-with-github {
-  cursor: pointer;
+.container__item-form-button--white {
   background-color: #fff;
-  border: none;
   color: #333;
 }
-.fa-github {
+.container__item-form-button--white .fab:first-of-type {
   margin: 0px 0px 8px 0px;
   font-size: 14px;
 }
-.sign-in-github {
-  font-size: 14px;
-}
-.forgot-pass-redirect {
+.container__item-link {
   text-decoration: none;
+}
+.container__item-link--header {
   font-size: 12px;
   margin: 12px 0px 0px;
   color: #00376b;
 }
-.forgot-pass-redirect:hover {
-text-decoration: underline;
+.container__item-link--header:hover {
+  text-decoration: underline;
 }
-.footer {
+.container__item-footer {
   text-align: center;
-  border: 1px solid #8e8e8e;
-  background-color: #fff;
-  margin: 0px 0px 10px;
-  padding: 10px 0px;
 }
-.footer-content {
+.container__item-footer-content {
   margin: 10px;
 }
-.footer-text {
+.container__item-footer-text {
   color: #262626;
 }
-.footer-redirect {
-  text-decoration: none;
+.container__item-link--footer {
   color: #0095f6;
 }
-.footer-redirect:hover {
+.container__item-link--footer:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 @media screen and (max-width: 480px) {
-  .header, .footer {
-    border:none;
+  .container__item-header {
+    border: none;
+  }
+  .container__item-footer {
+    border: none;
+    margin-top: 60px;
   }
 }
