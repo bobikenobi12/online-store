@@ -9,7 +9,7 @@ html {
   display: grid;
   align-items: center;
   justify-items: center;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 .text-color-blue {
   color: #215fff;

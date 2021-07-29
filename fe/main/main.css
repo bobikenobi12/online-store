@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .text-color-blue {
   color: #215fff;
@@ -32,9 +32,13 @@ body {
   line-height: 1.7;
   flex-grow: 1;
   font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 10px 12px;
   border-radius: 20px;
   outline: none;
+}
+.search-input::placeholder {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .nav-button {
   border: none;
