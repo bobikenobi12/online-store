@@ -16,26 +16,22 @@
     ></script>
   </head>
   <body>
-    <div class="main">
-      <div class="icon-div">
-        <img class="page-icon" src="/pictures/lock.png" alt="lock" />
-      </div>
-      <h4 class="help-msg">Trouble Logging In?</h4>
-      <div class="help-msg-description">
+    <div class="forgotten-pass">
+        <img class="forgotten-pass__icon" src="/pictures/lock.png" alt="lock" />
+      <h2 class="forgotten-pass__title">Trouble Logging In?</h2>
+      <p class="forgotten-pass__description">
         Enter your email and we'll send you a link to get back into your
         account.
+      </p>
+      <input class="forgotten-pass__input" type="email" placeholder="Email" />
+      <a href="#" class="forgotten-pass__link forgotten-pass__link--primary">Send Login Link</a>
+      <div class="forgotten-pass__separator">
+        <div class="forgotten-pass__separator-line"></div>
+        <span class="forgotten-pass__separator-text">OR</span>
+        <div class="forgotten-pass__separator-line"></div>
       </div>
-      <input class="email-input" type="email" placeholder="Email" />
-      <a href="#" class="confirmation-msg">Send Login Link</a>
-      <div class="separator">
-        <div class="lines"></div>
-        <span class="separator-text">OR</span>
-        <div class="lines"></div>
-      </div>
-      <a href="/fe/signup/signup.html" class="new-acc">Create new account</a>
-      <div class="signin-div">
-        <a href="/fe/login/login.html" class="signin">Back To Login</a>
-      </div>
+      <a href="/fe/signup/signup.html" class="forgotten-pass__link forgotten-pass__link-header">Create new account</a>
+        <a href="/fe/login/login.html" class="forgotten-pass__link forgotten-pass__link-footer">Back To Login</a>
     </div>
   </body>
 </html>

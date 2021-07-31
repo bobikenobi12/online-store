@@ -1,106 +1,100 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body,html {
-    height: 100%;
+body,
+html {
+  height: 100%;
 }
-body{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    font-family: "Roboto", sans-serif;
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.main {
-    display: flex;
-    flex-direction: column;
-    min-width: 350px;
-    align-items: center;
-    border: 1px solid #DBDBDB;
+.forgotten-pass {
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+  align-items: center;
+  border: 1px solid #dbdbdb;
 }
-.icon-div {
-    margin: 24px 0px 16px;
+.forgotten-pass__icon {
+  margin: 24px 0px 16px;
+  max-width: 100px;
 }
-.page-icon {
-    max-width: 100px;
+.forgotten-pass__title {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
 }
-.help-msg {
-    display: block;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 600;
+.forgotten-pass__description {
+  display: block;
+  text-align: center;
+  max-width: 250px;
+  color: #8e8e8e;
+  font-size: 14px;
+  opacity: 0.6;
+  margin-top: 5px;
+  padding-bottom: 15px;
 }
-.help-msg-description {
-    display: block;
-    text-align: center;
-    max-width: 250px;
-    color: #8E8E8E;
-    font-size: 14px;
-    opacity: 0.6;
-    margin-top: 5px;
-    padding-bottom: 15px;
+.forgotten-pass__input {
+  display: block;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  color: #dbdbdb;
+  border-radius: 5px;
+  width: 70%;
+  padding: 10px 9px;
+  font-size: 14px;
+  font-family: inherit;
+  margin-bottom: 16px;
 }
-.email-input {
-    display: block;
-    background-color: #FAFAFA;
-    border: 1px solid #DBDBDB;
-    color: #DBDBDB;
-    border-radius: 5px;
-    width: 70%;
-    padding: 10px 9px;
-    font-size: 14px;
+.forgotten-pass__input::placeholder {
+  color: #dbdbdb;
 }
-.email-input::placeholder {
-    color: #DBDBDB;
+.forgotten-pass__link {
+  width: 70%;
+  text-decoration: none;
+  text-align: center;
+  color: #262626;
 }
-.confirmation-msg {
-    text-align: center;
-    margin: 20px 44px 16px;
-    padding: 5px 0px;
-    color: #fff;
-    background-color: #215fff;
-    text-decoration: none;
-    border-radius: 5px;
-    min-width: 220px;
-}
-.separator {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-width: 280px;
-    text-align: center;
-    margin-bottom: 16px;
-}
-.separator-text {
-    font-size: 15px;
-    color: #8E8E8E;
-}
-.lines {
-    background-color: #DBDBDB;
-    width: 120px;
-    height: 1px;
-}
-.new-acc {
-    display: block;
-    color: #262626;
-    text-decoration: none;
-    margin-bottom: 60px;
-}
-.new-acc:hover {
+.forgotten-pass__link:hover {
     text-decoration: underline;
+  }
+.forgotten-pass__link--primary {
+  color: #fff;
+  background-color: #215fff;
+  border-radius: 5px;
+  min-width: 70%;
+  padding: 5px 0px;
+  margin-bottom:  16px;
 }
-.signin-div {
-    border-top: 1px solid #DBDBDB;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    background-color: #FAFAFA;
+.forgotten-pass__separator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 240px;
+  text-align: center;
+  margin-bottom: 16px;
 }
-.signin {
-    color: #262626;
-    text-decoration: none;
+.forgotten-pass__separator-text {
+  font-size: 15px;
+  color: #8e8e8e;
 }
-.signin-div:hover {
-    cursor: pointer;
+.forgotten-pass__separator-line {
+  background-color: #dbdbdb;
+  width: 100px;
+  height: 1px;
+}
+.forgotten-pass__link-footer {
+  border-top: 1px solid #dbdbdb;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  background-color: #fafafa;
+  color: #262626;
+  margin-top: 60px;
 }
