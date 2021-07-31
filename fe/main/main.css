@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .text-color-blue {
   color: #215fff;
@@ -32,13 +32,13 @@ body {
   line-height: 1.7;
   flex-grow: 1;
   font-size: 14px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 10px 12px;
   border-radius: 20px;
   outline: none;
 }
 .search-input::placeholder {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .nav-button {
   border: none;
@@ -47,31 +47,6 @@ body {
 }
 .nav-button:hover {
   background-color: #add8e6;
-}
-
-.dropdown__item--foot {
-  display: flex;
-  justify-content: center;
-  padding: 8px 12px;
-}
-.dropdown__item--head {
-  display: block;
-  text-align: center;
-  padding: 10px 11px 5px 11px;
-}
-.dropdown__main--reposition {
-  right: 0px;
-  min-width: 200px;
-}
-.dropdown__item-link--important {
-  display: flex;
-  align-items: center;
-  min-width: 225px;
-  background-color: #215fff;
-  color: #fff;
-}
-.dropdown__item-link-text--position {
-  padding: none;
 }
 .secondary-nav {
   display: flex;
