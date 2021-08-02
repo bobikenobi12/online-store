@@ -12,111 +12,106 @@ body {
   align-items: center;
   justify-items: center;
 }
-.container {
+.sign-in {
+  min-width: 350px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.container__item {
+.sign-in__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 1px solid #8e8e8e;
   background-color: #fff;
   margin: 0px 0px 10px;
   padding: 10px 0px;
 }
-.container__item-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 350px;
-}
-.container__item-title {
+.sign-in__header-title {
   color: #262626;
   margin: 22px 86.5px 12px;
 }
-.container__item-form {
+.sign-in__form {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  min-width: 350px;
   row-gap: 5px;
   margin: 24px 0px 0px;
   align-items: center;
 }
-.container__item-form-input {
-  min-width: 260px;
+.sign-in__form-input {
+  min-width: 245px;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
   background-color: #fafafa;
   padding: 9px 0px 7px 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.container__item-form-button {
+.sign-in__form-button {
+  font-size: 14px;
   border: none;
   cursor: pointer;
 }
-.container__item-form-button--blue{
-  min-width: 270px;
+.sign-in__form-button--primary{
+  min-width: 245px;
   color: #fff;
   border-radius: 5px;
   background-color: #0095f6;
   margin: 8px 40px;
-  padding: 5px 15px;
+  padding: 5px 9px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.container__item-form-button-text {
-  font-size: 14px;
-}
-.container__item-form-separator {
+.sign-in__form-separator {
   display: flex;
   align-items: center;
   margin: 10px 40px 18px;
 }
-.container__item-form-separator-text {
+.sign-in__form-separator-text {
   margin: 0px 18px;
   font-size: 15px;
   color: #8e8e8e;
 }
-.container__item-form-separator-line {
+.sign-in__form-separator-line {
   background-color: #dbdbdb;
-  min-width: 100px;
+  min-width: 97px;
   height: 1px;
 }
-.container__item-form-button--white {
+.sign-in__form-button--secondary{
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
   background-color: #fff;
-  color: #333;
+  color: #355185;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.container__item-form-button--white .fab:first-of-type {
-  margin: 0px 0px 8px 0px;
-  font-size: 14px;
-}
-.container__item-link {
+.sign-in__link {
   text-decoration: none;
 }
-.container__item-link--header {
+.sign-in__link--primary {
   font-size: 12px;
   margin: 12px 0px 0px;
   color: #00376b;
 }
-.container__item-link--header:hover {
+.sign-in__link--primary:hover {
   text-decoration: underline;
 }
-.container__item-footer {
+.sign-in__footer {
   text-align: center;
+  border: 1px solid #8e8e8e;
+  background-color: #fff;
+  margin: 0px 0px 10px;
+  padding: 25px;
 }
-.container__item-footer-content {
-  margin: 10px;
-}
-.container__item-footer-text {
-  color: #262626;
-}
-.container__item-link--footer {
+.sign-in__link--secondary {
   color: #0095f6;
 }
-.container__item-link--footer:hover {
+.sign-in__link--secondary:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 @media screen and (max-width: 480px) {
-  .container__item-header {
+  .sign-in__header {
     border: none;
   }
-  .container__item-footer {
+  .sign-in__footer {
     border: none;
     margin-top: 60px;
   }
