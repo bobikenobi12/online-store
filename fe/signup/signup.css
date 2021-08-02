@@ -11,23 +11,25 @@ body {
   display: grid;
   align-items: center;
   justify-items: center;
+}
+.sign-up {
+  min-width: 350px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.header {
+.sign-up__header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 350px;
+  margin: 0px 0px 10px;
   border: 1px solid #8e8e8e;
-  margin: 0px 0px 10px 0px;
-  padding: 10px 0px;
   background-color: #fff;
+  padding: 10px 0px;
 }
-.site-name {
+.sign-up__header-title {
   color: #262626;
   margin: 22px 86.5px 12px ;
 }
-.form-contents {
+.sign-up__form {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -35,83 +37,71 @@ body {
   row-gap: 5px;
   align-items: center;
 }
-.form-text {
+.sign-up__form-title{
   margin: 0px 40px 10px;
   color: #8e8e8e;
 }
-.signin-with-github {
+.sign-up__form-button {
+  min-width: 70%;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  background-color: #0095f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  padding: 5px 9px;
+}
+.sign-up__form-button--primary {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 9px;
+  column-gap: 8px;
   cursor: pointer;
-  min-width: 260px  ;
-  background-color: #0095F6;
-  border-radius: 3px;
-  border: none;
-  color: #fff;
 }
-.fa-github {
-  margin-right: 8px;
-  font-size: 14px;
-}
-.sign-in-github-text {
-  font-size: 14px;
-}
-.separator {
+.sign-up__form-separator {
   display: flex;
   align-items: center;
   margin: 10px 40px 10px;
 }
-.separator-text {
+.sign-up__form-separator-text {
   margin: 0px 18px;
   font-size: 15px;
   color: #8e8e8e;
 }
-.lines {
+.sign-up__form-separator-line {
   background-color: #dbdbdb;
-  min-width: 100px;
+  min-width: 108px;
   height: 1px;
 }
-.inputs {
-  min-width: 260px;
+.sign-up__form-input {
+  min-width: 70%;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
   background-color: #fafafa;
   padding: 9px 0px 7px 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.sign-up-button {
-  min-width: 270px;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  background-color: #0095f6;
+.sign-up__form-button--secondary {
   margin: 8px 40px;
-  padding: 5px 15px;
 }
-.footer {
+.sign-up__footer {
   text-align: center;
+  margin: 0px 0px 10px;
   border: 1px solid #8e8e8e;
   background-color: #fff;
-  margin: 0px 0px 10px;
-  padding: 10px 0px;
-}
-.footer-content {
-  margin: 10px;
-}
-.footer-text {
+  padding: 25px 0px;
   color: #262626;
 }
-.footer-redirect {
+.sign-up__link {
   text-decoration: none;
   color: #0095f6;
 }
-.footer-redirect:hover {
+.sign-up__link:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 @media screen and (max-width: 480px) {
-  .header, .footer {
+  .sign-up__header, .sign-up__footer {
     border:none;
   }
 }

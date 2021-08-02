@@ -16,41 +16,55 @@
     />
   </head>
   <body>
-    <div class="main">
-      <div class="header">
-        <h1 class="site-name">VAIN</h1>
+    <div class="sign-up">
+      <div class="sign-up__header">
+        <h1 class="sign-up__header-title">VAIN</h1>
         <form action="">
-          <div class="form-contents">
-            <h2 class="form-text">Sign up to start shopping.</h2>
-            <button class="signin-with-github">
-              <i class="fab fa-github"></i>
-              <span class="sign-in-github-text">Sign in with Github</span>
+          <div class="sign-up__form">
+            <h2 class="sign-up__form-title">Sign up to start shopping.</h2>
+            <button class="sign-up__form-button sign-up__form-button--primary">
+              <i class="fab fa-facebook-square"></i>
+              Sign in with Facebook
             </button>
-            <div class="separator">
-              <div class="lines"></div>
-              <span class="separator-text">OR</span>
-              <div class="lines"></div>
+            <div class="sign-up__form-separator">
+              <div class="sign-up__form-separator-line"></div>
+              <span class="sign-up__form-separator-text">OR</span>
+              <div class="sign-up__form-separator-line"></div>
             </div>
-            <input type="email" placeholder="Email" class="inputs" />
-            <input type="password" placeholder="Password" class="inputs" />
+            <input
+              type="email"
+              placeholder="Email"
+              class="sign-up__form-input"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              class="sign-up__form-input"
+            />
             <input
               type="password"
               placeholder="Confirm Password"
-              class="inputs"
+              class="sign-up__form-input"
             />
-            <button type="button" class="sign-up-button">
-              <div class="sign-in-text">Sign up</div>
+            <button
+              type="button"
+              class="
+                sign-up__form-button
+                sign-up__form-button--secondary
+              "
+            >
+              <div class="sign-up__form-button-text">Sign up</div>
             </button>
           </div>
         </form>
       </div>
-      <div class="footer">
-        <div class="footer-content">
-          <p class="footer-text">
+      <div>
+          <p class="sign-up__footer">
             Have an account?
-            <a class="footer-redirect" href="/fe/login/login.html">Sign in</a>
+            <a class="sign-up__link" href="/fe/login/login.html"
+              >Sign in</a
+            >
           </p>
-        </div>
       </div>
     </div>
   </body>
