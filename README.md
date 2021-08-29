@@ -13,6 +13,8 @@ Online store
 ### 3. Reviews:
    - *rate* a product from 0 to 5 stars
    - description for the *issue*
+   - filter review by stars or by newest
+   - can add comments below each review
 ### 4. Navbar:
    - leads to different *categories*
 ### 5. Product list:
