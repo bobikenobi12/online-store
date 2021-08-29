@@ -10,12 +10,13 @@ body {
   color: orange;
 }
 .product-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(6, 200px);
   justify-content: center;
   text-align: center;
-  column-gap: 10px;
+  grid-row-gap: 40px;
+  grid-column-gap: 10px;
+  grid-auto-flow: row;
   padding: 30px;
   background-color: #f2f2f7;
 }
@@ -23,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  max-width: 201px;
+  max-width: 200px;
   background-color: #fff;
   cursor: pointer;
 }
