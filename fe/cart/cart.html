@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../common/common.css" />
+    <link rel="stylesheet" href="../common/dropdown.css" />
+    <link rel="stylesheet" href="../common/nav.css" />
+    <link rel="stylesheet" href="cart.css" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/4d990b3ec8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="primary-nav">
+        <a class="nav-logo" href="/main/main.html"
+          ><img
+            class="nav-logo-image"
+            src="http://placekitten.com/135/35"
+            alt="logo"
+        /></a>
+        <form class="search-bar">
+          <input
+            class="search-input"
+            type="search"
+            placeholder="What are you looking for?"
+          />
+          <button type="button" class="nav-button">
+            <i class="fas fa-search text-color-blue"></i>
+          </button>
+        </form>
+        <span class="dropdown">
+          <div class="dropdown__head">
+            <i class="fas fa-user"></i>
+            <span class="dropdown__head-title">My account</span>
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="dropdown__main dropdown__main--widthchange">
+            <div
+              class="
+                dropdown__item
+                dropdown__item-header
+                dropdown__item-header--left-aligned
+              "
+            >
+              <i class="fas fa-user-tie"></i>
+              <span class="dropdown__item-text">Sign in to your account!</span>
+            </div>
+            <div class="dropdown__item dropdown__item-footer">
+              <a
+                href="/sign-in/sign-in.html"
+                class="dropdown__item-link dropdown__item-link--prominent"
+              >
+                <i class="fas fa-forward text-color-blue"></i>
+                <span class="dropdown__item-link-text">Sign in</span>
+              </a>
+              <a href="/sign-up/sign-up.html" class="dropdown__item-link"
+                >New account</a
+              >
+            </div>
+          </div>
+        </span>
+        <span class="dropdown">
+          <div class="dropdown__head">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="dropdown__head-title">Shopping cart</span>
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="dropdown__main dropdown__main--right-aligned">
+            <div
+              class="
+                dropdown__item dropdown__item-header dropdown__item--compact
+              "
+            >
+              No products added to shopping cart
+            </div>
+            <div
+              class="dropdown__item dropdown__item-footer dropdown__item--plain"
+            >
+              <a
+                href="/cart/cart.html"
+                class="
+                  dropdown__item-link
+                  dropdown__item-link--prominent
+                  dropdown__item-link--wide
+                "
+              >
+                <i class="fas fa-forward"></i>
+                <span class="dropdown__item-link-text">View shopping cart</span>
+              </a>
+            </div>
+          </div>
+        </span>
+      </div>
+      <ul class="secondary-nav">
+        <li class="category-item">
+          <a class="category-link" href="/fe/products/computers/computers.html"
+            >Computers</a
+          >
+        </li>
+        <li class="category-item">
+          <a class="category-link" href="/fe/products/computers/computers.html"
+            >Monitors</a
+          >
+        </li>
+        <li class="category-item">
+          <a class="category-link" href="/fe/products/computers/computers.html"
+            >Laptops</a
+          >
+        </li>
+        <li class="category-item">
+          <a class="category-link" href="/fe/products/computers/computers.html"
+            >Tablets</a
+          >
+        </li>
+        <li class="category-item">
+          <a class="category-link" href="/fe/products/computers/computers.html"
+            >Phones</a
+          >
+        </li>
+        <li class="category-item">
+          <a class="category-link" href="/fe/products/computers/computers.html"
+            >Gaming accesories</a
+          >
+        </li>
+      </ul>
+    </nav>
+      <!-- <div class="hidden">
+        <div><h1 class="title">Your shopping cart is empty</h1></div>
+        <a class="home-page-button" href="../main/main.html">Go to home page</a>
+      </div> -->
+      <main class="main-content">
+        <h1 class="main-content__title">Shopping cart</h1>
+      <div class="order">
+        <div class="background-color-blue">
+        <div class="order-product">
+          <img src="http://placekitten.com/120/120" class="product-img" alt="">
+          <a href="#" class="product-name">Акумулаторна бормашина 18 V 1.5 Ah Li-Ion Steinhaus, PRO-CD18+, 30 Nm, 2 степени 400/1400 об/мин, Бърз патронник 13 мм, 13 аксесоара, Пластмасова кутия</a>
+        <div class="product-properties">
+          <span>Availability: Available</span>
+          <span>Warranty: 24 months</span>
+        </div>
+        <div class="quantity-container">
+          <select name="" id="quantity" class="quantity">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <label for="quantity">Qty.</label>
+        </div>
+          <div class="order-price">
+            <p class="product-price"><span>286</span><sup class="money-decimal">80</sup>   bgn.</p>
+            <a href="#" class="remove-product">Remove</a>
+          </div>
+        </div>
+      </div>
+      <div class="order-summary">
+        <h2 class="order-summary__title">Information about your order</h2>
+      <div class="order-summary__products">All products:<div class="order-summary__products-price"><span>286</span><sup>80</sup><span>   bgn.</span></div></div>
+      <div class="order-summary__delivery">Total:<strong class="order-summary__delivery-price">FREE</strong></div>
+        <div class="order-summary__separator"></div>
+          <div class="order-summary__total">Total:<p class="order-summary__total-price"><span>286</span><sup class="order-summary__total-price-decimal">80</sup><span>   bgn.</span></p></div>
+          <a href="#" class="order-summary__checkout">
+            <i class="fas fa-forward"></i>
+            <span class="order-summary__checkout-text">Checkout</span>
+          </a>
+      </div>
+    </div>
+    </main>
+  </body>
+</html>
