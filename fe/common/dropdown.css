@@ -1,0 +1,105 @@
+.dropdown {
+  display: inline-flex;
+  position: relative;
+  font-size: 14px;
+  align-items: center;
+}
+.dropdown__head {
+  cursor: pointer;
+}
+.dropdown__head .fas:first-of-type,
+.dropdown__item-header .fas:first-of-type {
+  color: #215fff;
+}
+.dropdown .fas:first-of-type {
+  font-size: 25px;
+}
+.dropdown .dropdown__head-title {
+  margin: 0px 5px 0px 10px;
+}
+.dropdown__main {
+  display: none;
+  position: absolute;
+  top: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.dropdown__main--widthchange {
+  min-width: 300px;
+}
+.dropdown:hover .dropdown__main {
+  display: block;
+}
+.dropdown:hover .dropdown-main-cart {
+  display: block;
+  right: 2px;
+}
+.dropdown__item {
+  background-color: #fff;
+  cursor: default;
+}
+.dropdown__item-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+}
+.dropdown__item-text {
+  margin-left: 5px;
+}
+.dropdown__item-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #e1e1e1;
+}
+.dropdown__item-link {
+  color: #215fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.dropdown__item-link:hover {
+  text-decoration: underline;
+  color: black;
+}
+.dropdown__item-link--prominent {
+  display: flex;
+  align-items: center;
+  background-color: #215fff;
+  color: #fff;
+}
+.dropdown__item-link--wide {
+  min-width: 225px;
+}
+.dropdown__item-link--prominent:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.dropdown__item-link--prominent .fas {
+  border-radius: 0px 2px 20px 0px;
+  background-color: #fa5834;
+  color: #fff;
+  padding: 3px 8px 3px 8px;
+  border: 1px solid #fa5834;
+}
+.dropdown__item-link-text {
+  background-color: #215fff;
+  color: #fff;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+.dropdown__item--compact {
+  padding: 10px 11px 5px 11px;
+}
+.dropdown__main--right-aligned {
+  right: 0px;
+  min-width: 200px;
+}
+.dropdown__item--plain {
+  background-color: #fff;
+}
+.dropdown__item-header--left-aligned {
+  justify-content: left;
+}
