@@ -10,8 +10,9 @@ body {
 }
 .main-content {
   display: grid;
-  align-items: center;
+  grid-template-rows: 73px auto;
   justify-content: center;
+  align-items: flex-start;
   min-height: 100vh;
 }
 .main-content__title {
