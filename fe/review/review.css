@@ -1,4 +1,6 @@
 body {
+  display: grid;
+  grid-row-gap: 25px;
   background-color: #f2f2f7;
 }
 .checked {
@@ -33,16 +35,19 @@ body {
   padding: 0px 10px;
 }
 .review-container__head-content {
+  display: grid;
   grid-column-start: 2;
   grid-column-start: 3;
   grid-row-start: 1;
   grid-row-end: 3;
   padding: 0px 10px;
+  align-items: center;
 }
 .review-container__head-content-title {
   font-size: 17px;
 }
 .review-container__head-content-text {
+  align-self: start;
   font-size: 12px;
   text-decoration: none;
   color: #005eb8;
@@ -86,7 +91,8 @@ body {
   margin-bottom: 15px;
   outline: none;
 }
-.review-container__body-content:active {
+.review-container__body-content:focus {
+  outline: none;
   border: 1px solid #005eb8;
 }
 .review-container__body-text--small {
