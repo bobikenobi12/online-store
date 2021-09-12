@@ -1,27 +1,19 @@
-body {
-  background-color: #fafafa;
-}
 .hidden {
   display: none;
 }
-.text-color-blue {
-  color: #215fff;
-}
 .main-content {
   display: grid;
-  grid-template-rows: 73px auto;
+  grid-template-rows: repeat(2, auto);
   justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
 }
 .main-content__title {
   padding: 15px 0px 15px 15px;
   color: #404040;
 }
 .order {
-  display: inline-grid;
-  grid-template-columns: 2fr 0.5fr;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: start;
   justify-self: center;
   grid-column-gap: 20px;
 }
@@ -32,36 +24,28 @@ body {
   background-color: #e4f1f9;
   border-radius: 5px;
 }
-.order-product {
-  display: inline-grid;
-  grid-template-columns: 120px 350px 90px 165px;
-  grid-template-rows: repeat(2, 60px);
+.product {
+  display: grid;
+  grid-template-columns: auto 350px auto auto;
+  grid-template-rows: repeat(2, auto);
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
   grid-column-gap: 30px;
 }
-.product-img {
-  grid-row-start: 1;
-  grid-row-end: 3;
+.product__img {
+  grid-row: 1 / -1;
 }
-.product-name {
+.product__name {
   color: #000000;
   font-size: 14px;
   font-weight: bold;
   text-decoration: none;
-  justify-self: start;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
 }
-.product-name:hover {
+.product__name:hover {
   text-decoration: underline;
 }
-.product-properties {
-  display: flex;
-  flex-direction: column;
+.product__properties {
   font-size: 12px;
   grid-column-start: 2;
   grid-column-end: 3;
@@ -69,18 +53,14 @@ body {
   grid-row-end: 3;
   align-self: end;
 }
-.quantity-container {
-  color: #404040;
-}
-.quantity {
-  align-self: start;
+.product__quantity {
   padding: 6px;
 }
-.order-price {
+.product__price {
   display: grid;
   justify-self: end;
 }
-.product-price {
+.product__price-text {
   color: #404040;
   font-weight: bold;
   font-size: 20px;
@@ -88,34 +68,31 @@ body {
 .money-decimal {
   font-size: 12px;
 }
-.remove-product {
+.product__remove-button {
   color: #1763aa;
+  background-color: #fff;
+  border: none;
   text-decoration: none;
   justify-self: end;
+  cursor: pointer;
 }
-.remove-product:hover {
+.product__remove-button:hover {
   text-decoration: underline;
 }
 .order-summary {
-  display: grid;
-  grid-template-rows: 65px 27px 26px 42px 70px 40px;
-  grid-template-columns: 225px;
   background-color: #fff;
   box-shadow: 3px 3px 2px #e3e3e3;
   padding: 20px;
   border-radius: 10px;
 }
 .order-summary__title {
-  grid-row-start: 1;
-  grid-row-end: 2;
+  margin-bottom: 5px;
   color: #404040;
   font-size: 20px;
 }
 .order-summary__products {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-template-columns: repeat(2, auto);
   color: #404040;
   font-size: 14px;
 }
@@ -124,9 +101,7 @@ body {
 }
 .order-summary__delivery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-row-start: 3;
-  grid-row-end: 4;
+  grid-template-columns: repeat(2, auto);
   color: #404040;
   font-size: 14px;
 }
@@ -134,18 +109,17 @@ body {
   justify-self: end;
   color: #009933;
 }
-.order-summary__separator {
-  grid-row-start: 4;
-  grid-row-end: 5;
-  justify-self: center;
+.order-summary__total::before {
+  content: "";
   margin: 20px 0px;
   background-color: #dbdbdb;
   min-width: 230px;
+  min-height: 1px;
   border-radius: 10px;
 }
 .order-summary__total {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
   grid-row-start: 5;
   grid-row-end: 6;
   color: #000000;
@@ -158,26 +132,4 @@ body {
 }
 .order-summary__total-price-decimal {
   font-size: 15px;
-}
-.order-summary__checkout {
-  display: grid;
-  grid-template-columns: 55px 170px;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 10px;
-  background-color: #215fff;
-  text-decoration: none;
-  cursor: pointer;
-  color: #fff;
-  align-items: center;
-}
-.fa-forward {
-  justify-self: start;
-  border-radius: 10px 2px 20px 10px;
-  background-color: #fa5834;
-  padding: 12px 20px;
-}
-.order-summary__checkout-text {
-  align-self: center;
-  justify-self: center;
 }

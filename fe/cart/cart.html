@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../common/dropdown.css" />
     <link rel="stylesheet" href="../common/nav.css" />
     <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="../common/action-button.css">
     <title>Document</title>
     <script
       src="https://kit.fontawesome.com/4d990b3ec8.js"
@@ -129,108 +130,77 @@
         </li>
       </ul>
     </nav>
-      <!-- <div class="hidden">
+    <!-- <div class="hidden">
         <div><h1 class="title">Your shopping cart is empty</h1></div>
         <a class="home-page-button" href="../main/main.html">Go to home page</a>
       </div> -->
-      <main class="main-content">
-        <h1 class="main-content__title">Shopping cart</h1>
+    <main class="main-content">
+      <h1 class="main-content__title">Shopping cart</h1>
       <div class="order">
         <div class="order-products-container">
-        <div class="order-product">
-          <img src="http://placekitten.com/120/120" class="product-img" alt="">
-          <a href="#" class="product-name">Акумулаторна бормашина 18 V 1.5 Ah Li-Ion Steinhaus, PRO-CD18+, 30 Nm, 2 степени 400/1400 об/мин, Бърз патронник 13 мм, 13 аксесоара, Пластмасова кутия</a>
-        <div class="product-properties">
-          <span>Availability: Available</span>
-          <span>Warranty: 24 months</span>
-        </div>
-        <div class="quantity-container">
-          <select name="" id="quantity" class="quantity">
-            <option value="1" selected>1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-          <label for="quantity">Qty.</label>
-        </div>
-          <div class="order-price">
-            <p class="product-price"><span>286</span><sup class="money-decimal">80</sup>   bgn.</p>
-            <a href="#" class="remove-product">Remove</a>
+          <div class="product">
+            <img
+              src="http://placekitten.com/120/120"
+              class="product__img"
+              alt=""
+            />
+            <a href="#" class="product__name"
+              >Акумулаторна бормашина 18 V 1.5 Ah Li-Ion Steinhaus, PRO-CD18+,
+              30 Nm, 2 степени 400/1400 об/мин, Бърз патронник 13 мм, 13
+              аксесоара, Пластмасова кутия</a
+            >
+            <div class="product__properties">
+              <footer>Availability: Available</footer>
+              <footer>Warranty: 24 months</footer>
+            </div>
+            <label>
+              <select class="product__quantity">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              Qty.</label
+            >
+            <div class="product__price">
+              <p class="product__price-text">
+                <span>286</span><sup class="money-decimal">80</sup> bgn.
+              </p>
+              <button class="product__remove-button">Remove</button>
+            </div>
           </div>
         </div>
-        <div class="order-product">
-          <img src="http://placekitten.com/120/120" class="product-img" alt="">
-          <a href="#" class="product-name">Акумулаторна бормашина 18 V 1.5 Ah Li-Ion Steinhaus, PRO-CD18+, 30 Nm, 2 степени 400/1400 об/мин, Бърз патронник 13 мм, 13 аксесоара, Пластмасова кутия</a>
-        <div class="product-properties">
-          <span>Availability: Available</span>
-          <span>Warranty: 24 months</span>
-        </div>
-        <div class="quantity-container">
-          <select name="" id="quantity" class="quantity">
-            <option value="1" selected>1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-          <label for="quantity">Qty.</label>
-        </div>
-          <div class="order-price">
-            <p class="product-price"><span>286</span><sup class="money-decimal">80</sup>   bgn.</p>
-            <a href="#" class="remove-product">Remove</a>
+        <div class="order-summary">
+          <h2 class="order-summary__title">Information about your order</h2>
+          <div class="order-summary__products">
+            All products:
+            <div class="order-summary__products-price">
+              <span>286</span><sup>80</sup><span> bgn.</span>
+            </div>
           </div>
-        </div>
-        <div class="order-product">
-          <img src="http://placekitten.com/120/120" class="product-img" alt="">
-          <a href="#" class="product-name">Акумулаторна бормашина 18 V 1.5 Ah Li-Ion Steinhaus, PRO-CD18+, 30 Nm, 2 степени 400/1400 об/мин, Бърз патронник 13 мм, 13 аксесоара, Пластмасова кутия</a>
-        <div class="product-properties">
-          <span>Availability: Available</span>
-          <span>Warranty: 24 months</span>
-        </div>
-        <div class="quantity-container">
-          <select name="" id="quantity" class="quantity">
-            <option value="1" selected>1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-          <label for="quantity">Qty.</label>
-        </div>
-          <div class="order-price">
-            <p class="product-price"><span>286</span><sup class="money-decimal">80</sup>   bgn.</p>
-            <a href="#" class="remove-product">Remove</a>
+          <div class="order-summary__delivery">
+            Total:<strong class="order-summary__delivery-price">FREE</strong>
           </div>
-        </div>
-      </div>
-      <div class="order-summary">
-        <h2 class="order-summary__title">Information about your order</h2>
-      <div class="order-summary__products">All products:<div class="order-summary__products-price"><span>286</span><sup>80</sup><span>   bgn.</span></div></div>
-      <div class="order-summary__delivery">Total:<strong class="order-summary__delivery-price">FREE</strong></div>
-        <div class="order-summary__separator"></div>
-          <div class="order-summary__total">Total:<p class="order-summary__total-price"><span>286</span><sup class="order-summary__total-price-decimal">80</sup><span>   bgn.</span></p></div>
-          <a href="#" class="order-summary__checkout">
+          <div class="order-summary__total">
+            Total:
+            <p class="order-summary__total-price">
+              <span>286</span
+              ><sup class="order-summary__total-price-decimal">80</sup
+              ><span> bgn.</span>
+            </p>
+          </div>
+          <button class="action-button">
             <i class="fas fa-forward"></i>
-            <span class="order-summary__checkout-text">Checkout</span>
-          </a>
+            <span class="action-button__text">Checkout</span>
+          </button>
+        </div>
       </div>
-    </div>
     </main>
   </body>
 </html>
