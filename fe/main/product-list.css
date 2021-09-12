@@ -26,6 +26,7 @@ body {
   border-radius: 5px;
   max-width: 200px;
   background-color: #fff;
+  text-decoration: none;
   cursor: pointer;
 }
 .product-list__item-title {
