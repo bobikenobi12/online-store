@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="review.css" />
-    <link rel="stylesheet" href="../common/nav.css">
-    <link rel="stylesheet" href="../common/dropdown.css">
-    <link rel="stylesheet" href="../common/common.css">
+    <link rel="stylesheet" href="../common/nav.css" />
+    <link rel="stylesheet" href="../common/dropdown.css" />
+    <link rel="stylesheet" href="../common/common.css" />
+    <link rel="stylesheet" href="../common/primary-button.css" />
     <title>Vain review</title>
     <script
       src="https://kit.fontawesome.com/4d990b3ec8.js"
@@ -130,38 +131,63 @@
       </ul>
     </nav>
     <main class="review">
-    <div class="review-container">
-      <div class="review-container__head">
-        <img src="http://placekitten.com/74/74" alt="" class="review-container__head-img"/>
-        <div class="review-container__head-content">
-        <h1 class="review-container__head-content-title">Add review for:</h1>
-        <a href="#" class="review-container__head-content-text">Акумулаторна бормашина Steinhaus Start, PRO-CD144B, 20 Nm, 550 об/мин, акумулатор 14.4 V 1.3 Ah Li-Ion, Бързозатягащ патронник 10 мм, 7 аксесоари, Пластмасова кутия</a>
+      <div class="review__head">
+        <img
+          src="http://placekitten.com/75/75"
+          alt=""
+          class="review__head-img"
+        />
+        <h1 class="review__head-title">Add review for:</h1>
+        <a href="#" class="review__head-text"
+          >Petar robot 65 gdjoaspghbadiogbdhiasvbghadi</a
+        >
+      </div>
+      <div class="review__rating">
+        <h2 class="review__section-title">Rating</h2>
+        <div class="review-container__rating-stars">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <span>Rate the product</span>
         </div>
       </div>
-      <div class="review-container__body">
-        <h2 class="review-container__body-title">Rating:</h2>
-        <div class="review-container__body-rating">
-          <i class="fa fa-star checked"></i>
-          <i class="fa fa-star checked"></i>
-          <i class="fa fa-star checked"></i>
-          <i class="fa fa-star checked"></i>
-          <i class="fa fa-star checked"></i>
-          <span class="review-container__body-rating-text">Rate the product</span>
-        </div>
-        <label for="review-textarea" class="review-container__body-text">Review:</label>
-        <textarea class="review-container__body-content" name="" id="review-textarea" rows="7" placeholder="Tell us what you think about the product" required></textarea>
-        <label for="review-input" class="review-container__body-text">Gallery: <small class="review-container__body-text review-container__body-text--small">(optional)</small></label>
-        <div id="review-input" class="review-container__body-upload">
-        <input type="file" accept=".png, .jpg, .jpeg, .gif" multiple id="files" style="display: none;">
-        <label for="files" class="review-container__body-upload-button"><i class="fas fa-plus"></i></label>
-        </div>
-        <div class="review-container__body-form">
-          <hr class="review-container__body-form-spacer">
-        <button class="review-container__body-form-publish">Add review</button>
-        <a href="" class="review-container__body-form-cancel">Cancel</a>
+      <div class="review__description">
+        <label for="textarea" class="review__section-title">Review:</label>
+        <textarea
+          name="review-desc"
+          id="textarea"
+          rows="10"
+          class="review__description-textarea"
+          placeholder="Write your opinion about the product"
+        ></textarea>
       </div>
+      <div class="review-title">
+        <label for="title" class="review__section-title"
+          >Review title:
+          <small class="review__section-small">(optional)</small></label
+        >
+        <input
+          type="text"
+          id="title"
+          class="review-title-input"
+          placeholder="Write a title of your choice"
+        />
       </div>
-    </div>
-  </main>
+      <div class="review__gallery">
+        <h2 class="review__section-title">
+          Gallery <small class="review__section-small">(optional)</small>
+        </h2>
+        <label for="gallery" class="review__gallery-file-selector">
+          <input id="gallery" type="file" accept=".png, .jpg, .jpeg, .gif" style="display: none;"/>
+          <i class="fas fa-plus"></i>
+        </label>
+      </div><hr class="review__section-separator">
+      <div class="review__buttons">
+        <button class="primary-button">Add review</button>
+        <a href="#" class="review__buttons-cancel">Cancel</a>
+      </div>
+    </main>
   </body>
 </html>
