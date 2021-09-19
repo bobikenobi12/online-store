@@ -14,7 +14,6 @@
 }
 .review__section-small {
   color: #888888;
-  font-size: 12px;
 }
 .review__section-separator {
   border: none;
@@ -54,15 +53,15 @@
 .review__head-text:hover {
   text-decoration: underline;
 }
-.review-container__rating-stars {
+.review__rating-stars {
   display: flex;
   align-items: center;
 }
-.review-container__rating-stars > i {
+.review__rating-stars > .fa {
   font-size: 32px;
   color: #ccc;
 }
-.review-container__rating-stars span {
+.review__rating-stars span {
   padding-left: 10px;
   font-size: 14px;
   font-weight: 700;
@@ -71,7 +70,7 @@
   background-color: #fefefe;
   border: 1px solid #ccc;
   border-radius: 3px;
-  width: 650px;
+  width: 50%;
   padding: 7px 12px;
   color: #666666;
   font-size: 14px;
@@ -81,16 +80,16 @@
   border-color: #66afe9;
   outline: none;
 }
-.review-title-input {
+.review__title-input {
   padding: 7px 12px;
   font-size: 14px;
   color: #666;
   background-color: #fefefe;
   border: 1px solid #ccc;
   border-radius: 3px;
-  width: 650px;
+  width: 50%;
 }
-.review-title-input:focus {
+.review__title-input:focus {
   border-color: #66afe9;
   outline: none;
 }
@@ -99,17 +98,48 @@
   flex-direction: column;
   gap: 5px;
 }
+.review__gallery-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .review__gallery-file-selector {
-  line-height: auto;
   border: 2px dashed #ccc;
   border-radius: 4px;
-  align-self: flex-start;
   font-size: 20px;
   padding: 16px 20px;
   margin-left: 5px;
+  justify-self: flex-start;
 }
 .review__gallery-file-selector:hover {
   border-color: #a3a3a3;
+}
+.review__gallery-file-selector #gallery {
+  display: none;
+}
+.review__gallery-image {
+  position: relative;
+  width: 62px;
+  height: 62px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("http://placekitten.com/500/300");
+}
+.review__gallery-image i {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 14px;
+  line-height: 0.85;
+  padding: 3px;
+  border-radius: 3px;
+  background-color: #EF2809;
+  color: #fff;
+  cursor: pointer;
+}
+.review__gallery-image i:hover {
+  transform: scale(1.2);
 }
 .review__buttons {
   margin-bottom: 40px;
@@ -120,6 +150,8 @@
   font-weight: 400;
   text-decoration: none;
   font-size: 12px;
+  border: none;
+  background-color: #fff;
 }
 .review__buttons-cancel:hover {
   text-decoration: underline;

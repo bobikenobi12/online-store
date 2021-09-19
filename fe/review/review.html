@@ -142,9 +142,9 @@
           >Petar robot 65 gdjoaspghbadiogbdhiasvbghadi</a
         >
       </div>
-      <div class="review__rating">
+      <div>
         <h2 class="review__section-title">Rating</h2>
-        <div class="review-container__rating-stars">
+        <div class="review__rating-stars">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
@@ -153,7 +153,7 @@
           <span>Rate the product</span>
         </div>
       </div>
-      <div class="review__description">
+      <div>
         <label for="textarea" class="review__section-title">Review:</label>
         <textarea
           name="review-desc"
@@ -163,15 +163,14 @@
           placeholder="Write your opinion about the product"
         ></textarea>
       </div>
-      <div class="review-title">
+      <div>
         <label for="title" class="review__section-title"
-          >Review title:
-          <small class="review__section-small">(optional)</small></label
+          >Title: <small class="review__section-small">(optional)</small></label
         >
         <input
           type="text"
           id="title"
-          class="review-title-input"
+          class="review__title-input"
           placeholder="Write a title of your choice"
         />
       </div>
@@ -179,14 +178,23 @@
         <h2 class="review__section-title">
           Gallery <small class="review__section-small">(optional)</small>
         </h2>
-        <label for="gallery" class="review__gallery-file-selector">
-          <input id="gallery" type="file" accept=".png, .jpg, .jpeg, .gif" style="display: none;"/>
-          <i class="fas fa-plus"></i>
-        </label>
-      </div><hr class="review__section-separator">
+        <div class="review__gallery-content">
+          <label for="gallery" class="review__gallery-file-selector">
+            <input
+              id="gallery"
+              type="file"
+              accept=".png, .jpg, .jpeg, .gif"
+              multiple
+            />
+            <i class="fas fa-plus"></i>
+          </label>
+          <div class="review__gallery-image"><i class="fas fa-times"></i></div>
+        </div>
+      </div>
+      <hr class="review__section-separator" />
       <div class="review__buttons">
         <button class="primary-button">Add review</button>
-        <a href="#" class="review__buttons-cancel">Cancel</a>
+        <button class="review__buttons-cancel">Cancel</button>
       </div>
     </main>
   </body>
