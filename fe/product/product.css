@@ -1,6 +1,4 @@
 body {
-  display: grid;
-  grid-row-gap: 25px;
   background-color: #f2f2f7;
   color: #222222;
 }
@@ -11,6 +9,7 @@ body {
   display: grid;
   justify-content: center;
   align-items: flex-start;
+  margin-top: 25px;
 }
 .product-container {
   display: grid;
@@ -192,22 +191,11 @@ body {
   font-size: 16px;
 }
 .review-container__options {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  display: flex;
+  gap: 15px;
+  align-items: center;
   margin: 10px 0px;
   font-size: 13px;
-}
-.review-container__options-text {
-  padding: 8px 12px 8px 0px;
-}
-.review-container__options-select {
-  padding: 7px 12px;
-  border: 1px solid #ccc;
-  outline: none;
-  border-radius: 3px;
-}
-.review-container__options-select:focus {
-  border: 1px solid #005eb8;
 }
 .review-container__review {
   display: grid;

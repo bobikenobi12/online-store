@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../common/common.css" />
-    <link rel="stylesheet" href="../common/dropdown.css" />
+    <link rel="stylesheet" href="../common/popup-menu.css" />
     <link rel="stylesheet" href="../common/nav.css" />
     <link rel="stylesheet" href="../common/action-button.css" />
     <link rel="stylesheet" href="../common/primary-button.css" />
+    <link rel="stylesheet" href="../common/components/dropdown-filters/dropdown-filters.css">
     <link rel="stylesheet" href="product.css" />
     <title>Vain | product_name</title>
     <script
       src="https://kit.fontawesome.com/4d990b3ec8.js"
       crossorigin="anonymous"
     ></script>
+    <script src="../common/components/dropdown-filters/dropdown-filters.js" defer></script>
   </head>
   <body>
     <nav class="nav-bar">
@@ -35,64 +37,64 @@
             <i class="fas fa-search text-color-blue"></i>
           </button>
         </form>
-        <span class="dropdown">
-          <div class="dropdown__head">
+        <span class="popup-menu">
+          <div class="popup-menu__head">
             <i class="fas fa-user"></i>
-            <span class="dropdown__head-title">My account</span>
+            <span class="popup-menu__head-title">My account</span>
             <i class="fas fa-caret-down"></i>
           </div>
-          <div class="dropdown__main dropdown__main--widthchange">
+          <div class="popup-menu__main popup-menu__main--widthchange">
             <div
               class="
-                dropdown__item
-                dropdown__item-header
-                dropdown__item-header--left-aligned
+                popup-menu__item
+                popup-menu__item-header
+                popup-menu__item-header--left-aligned
               "
             >
               <i class="fas fa-user-tie"></i>
-              <span class="dropdown__item-text">Sign in to your account!</span>
+              <span class="popup-menu__item-text">Sign in to your account!</span>
             </div>
-            <div class="dropdown__item dropdown__item-footer">
+            <div class="popup-menu__item popup-menu__item-footer">
               <a
                 href="/sign-in/sign-in.html"
-                class="dropdown__item-link dropdown__item-link--prominent"
+                class="popup-menu__item-link popup-menu__item-link--prominent"
               >
                 <i class="fas fa-forward text-color-blue"></i>
-                <span class="dropdown__item-link-text">Sign in</span>
+                <span class="popup-menu__item-link-text">Sign in</span>
               </a>
-              <a href="/sign-up/sign-up.html" class="dropdown__item-link"
+              <a href="/sign-up/sign-up.html" class="popup-menu__item-link"
                 >New account</a
               >
             </div>
           </div>
         </span>
-        <span class="dropdown">
-          <div class="dropdown__head">
+        <span class="popup-menu">
+          <div class="popup-menu__head">
             <i class="fas fa-shopping-cart"></i>
-            <span class="dropdown__head-title">Shopping cart</span>
+            <span class="popup-menu__head-title">Shopping cart</span>
             <i class="fas fa-caret-down"></i>
           </div>
-          <div class="dropdown__main dropdown__main--right-aligned">
+          <div class="popup-menu__main popup-menu__main--right-aligned">
             <div
               class="
-                dropdown__item dropdown__item-header dropdown__item--compact
+                popup-menu__item popup-menu__item-header popup-menu__item--compact
               "
             >
               No products added to shopping cart
             </div>
             <div
-              class="dropdown__item dropdown__item-footer dropdown__item--plain"
+              class="popup-menu__item popup-menu__item-footer popup-menu__item--plain"
             >
               <a
                 href="/cart/cart.html"
                 class="
-                  dropdown__item-link
-                  dropdown__item-link--prominent
-                  dropdown__item-link--wide
+                  popup-menu__item-link
+                  popup-menu__item-link--prominent
+                  popup-menu__item-link--wide
                 "
               >
                 <i class="fas fa-forward"></i>
-                <span class="dropdown__item-link-text">View shopping cart</span>
+                <span class="popup-menu__item-link-text">View shopping cart</span>
               </a>
             </div>
           </div>
@@ -284,38 +286,36 @@
         </div>
         <hr class="review-section__separator" />
         <div class="review-container__options">
-          <div>
-            <label for="sort" class="review-container__options-text"
-              >Sort by:</label
-            >
-            <select id="sort" class="review-container__options-select">
-              <option value="Most popular" selected>Most popular</option>
-              <option value="Newest">Newest</option>
-            </select>
-          </div>
-          <div>
-            <label for="filter" class="review-container__options-text"
-              >Filter:</label
-            >
-            <select id="filter" class="review-container__options-select">
-              <option value="Most popular" selected>All reviews</option>
-              <option value="5 stars">Reviews with 5 stars</option>
-              <option value="4 stars">Reviews with 4 stars</option>
-              <option value="3 stars">Reviews with 3 stars</option>
-              <option value="2 stars">Reviews with 2 stars</option>
-              <option value="1 star">Reviews with 1 stars</option>
-            </select>
-          </div>
+          <label for="sort">Sort by</label>
+          <select data-dropdown id="sort">
+            <option value="Most popular">Most popular</option>
+            <option value="Newest">Newest</option>
+          </select>
+          <label for="sort">Filter</label>
+          <select data-dropdown id="sort">
+            <option value="All reviews">All reviews</option>
+            <option value="5 stars">Reviews with 5 stars</option>
+            <option value="4 stars">Reviews with 4 stars</option>
+            <option value="3 stars">Reviews with 3 stars</option>
+            <option value="2 stars">Reviews with 2 stars</option>
+            <option value="1 star">Reviews with 1 star</option>
+          </select>
         </div>
         <hr class="review-section__separator" />
         <div class="review-container__review">
           <div class="review-container__review-head">
-            <img src="http://placekitten.com/54/54" alt="thumbnail" class="review-container__review-head-thumbnail">
+            <img
+              src="http://placekitten.com/54/54"
+              alt="thumbnail"
+              class="review-container__review-head-thumbnail"
+            />
             <p class="review-container__review-head-name">Petar Metodiev</p>
             <p class="review-container__review-head-date">22 feb. 2021</p>
           </div>
           <div class="review-container__review-body">
-            <p class="review-container__review-body-title">Wouldn't recommend</p>
+            <p class="review-container__review-body-title">
+              Wouldn't recommend
+            </p>
             <div class="review-container__review-body-stars">
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
@@ -323,14 +323,17 @@
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
             </div>
-            <p class="review-container__review-description">This monitor sucks and i want a refund asap or else i will do some bad things!!!!!!!!!</p>
+            <p class="review-container__review-description">
+              This monitor sucks and i want a refund asap or else i will do some
+              bad things!!!!!!!!!
+            </p>
             <div class="review-container__review-body-attributes">
               <i class="far fa-thumbs-up"></i>
               <span>5</span>
             </div>
           </div>
         </div>
-        <hr class="review-section__separator">
+        <hr class="review-section__separator" />
       </div>
     </main>
   </body>
