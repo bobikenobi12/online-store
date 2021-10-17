@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../common/common.css" />
+    <link rel="stylesheet" href="../common/popup-menu.css" />
+    <link rel="stylesheet" href="../common/nav.css" />
+    <link rel="stylesheet" href="../common/action-button.css" />
+    <link rel="stylesheet" href="../common/primary-button.css" />
+    <link rel="stylesheet" href="productcategory.css" />
+    <link rel="stylesheet" href="../common/components/accordeon/accordeon.css" />
+    <title>Vain | product_category</title>
+    <script
+      src="https://kit.fontawesome.com/4d990b3ec8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../common/components/accordeon/accordeon.js" defer></script>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="primary-nav">
+        <a class="nav-logo" href="/main/main.html"
+          ><img
+            class="nav-logo-image"
+            src="http://placekitten.com/135/35"
+            alt="logo"
+        /></a>
+        <form class="search-bar">
+          <input
+            class="search-input"
+            type="search"
+            placeholder="What are you looking for?"
+          />
+          <button type="button" class="nav-button">
+            <i class="fas fa-search text-color-blue"></i>
+          </button>
+        </form>
+        <span class="popup-menu">
+          <div class="popup-menu__head">
+            <i class="fas fa-user"></i>
+            <span class="popup-menu__head-title">My account</span>
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="popup-menu__main popup-menu__main--widthchange">
+            <div
+              class="
+                popup-menu__item
+                popup-menu__item-header
+                popup-menu__item-header--left-aligned
+              "
+            >
+              <i class="fas fa-user-tie"></i>
+              <span class="popup-menu__item-text">Sign in to your account!</span>
+            </div>
+            <div class="popup-menu__item popup-menu__item-footer">
+              <a
+                href="/sign-in/sign-in.html"
+                class="popup-menu__item-link popup-menu__item-link--prominent"
+              >
+                <i class="fas fa-forward text-color-blue"></i>
+                <span class="popup-menu__item-link-text">Sign in</span>
+              </a>
+              <a href="/sign-up/sign-up.html" class="popup-menu__item-link"
+                >New account</a
+              >
+            </div>
+          </div>
+        </span>
+        <span class="popup-menu">
+          <div class="popup-menu__head">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="popup-menu__head-title">Shopping cart</span>
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="popup-menu__main popup-menu__main--right-aligned">
+            <div
+              class="
+                popup-menu__item popup-menu__item-header popup-menu__item--compact
+              "
+            >
+              No products added to shopping cart
+            </div>
+            <div
+              class="popup-menu__item popup-menu__item-footer popup-menu__item--plain"
+            >
+              <a
+                href="/cart/cart.html"
+                class="
+                  popup-menu__item-link
+                  popup-menu__item-link--prominent
+                  popup-menu__item-link--wide
+                "
+              >
+                <i class="fas fa-forward"></i>
+                <span class="popup-menu__item-link-text">View shopping cart</span>
+              </a>
+            </div>
+          </div>
+        </span>
+      </div>
+      <ul class="secondary-nav">
+        <li class="category-item">
+          <a class="category-link" href="/fe/products/computers/computers.html"
+            >Computers</a
+          >
+        </li>
+        <li class="category-item">
+          <a class="category-link" href="/fe/products/computers/computers.html"
+            >Monitors</a
+          >
+        </li>
+        <li class="category-item">
+          <a class="category-link" href="/fe/products/computers/computers.html"
+            >Laptops</a
+          >
+        </li>
+        <li class="category-item">
+          <a class="category-link" href="/fe/products/computers/computers.html"
+            >Tablets</a
+          >
+        </li>
+        <li class="category-item">
+          <a class="category-link" href="/fe/products/computers/computers.html"
+            >Phones</a
+          >
+        </li>
+        <li class="category-item">
+          <a class="category-link" href="/fe/products/computers/computers.html"
+            >Gaming accesories</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main class="product-category">
+      <div class="product-category__listing">
+        <div class="product-category__listing-heading">
+          <p class="product-category__listing-heading-title">Computers</p>
+          <span class="product-category__listing-heading-products">5088</span>
+        </div>
+        <hr class="product-section__separator" />
+      </div>
+
+      <div class="product-category__filters">
+        <select data-accordeon data-accordeon-label="ghiodaghuifvyhuiadiohhboads">
+          <option value="New models">New models (4773)</option>
+          <option value="In stock">In stock (4767)</option>
+          <option value="Special offers">Special offers (1136)</option>
+          <option value="Unpacked">Unpacked (41)</option>
+        </select>
+        <select data-accordeon data-accordeon-label="Availability">
+          <option value="New models">New models (4773)</option>
+          <option value="In stock">In stock (4767)</option>
+          <option value="Special offers">Special offers (1136)</option>
+          <option value="Unpacked">Unpacked (41)</option>
+        </select>
+      </div>
+
+      <div class="product-category__items">
+        <div class="product-category__item" href="../product/product.html">
+          <img
+            class="product-category__item-thumbnail"
+            src="http://placekitten.com/220/220"
+            alt=""
+          />
+          <h1 class="product-category__item-title">
+            Nulla pellentesque vulputate blandit. Morbi.
+          </h1>
+          <div class="product-category__item-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <small class="product-category__item-rating-small">(15)</small>
+          </div>
+          <div class="product-category-item-content">
+            <p class="product-category__item-content-price">
+              74<sup>99</sup>bgn.
+            </p>
+            <button class="action-button">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="action-button__text">Checkout</span>
+            </button>
+          </div>
+        </div>
+        <div class="product-category__item" href="../product/product.html">
+          <img
+            class="product-category__item-thumbnail"
+            src="http://placekitten.com/220/220"
+            alt=""
+          />
+          <h1 class="product-category__item-title">
+            Nulla pellentesque vulputate blandit. Morbi.
+          </h1>
+          <div class="product-category__item-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <small class="product-category__item-rating-small">(15)</small>
+          </div>
+          <div class="product-category-item-content">
+            <p class="product-category__item-content-price">
+              74<sup>99</sup>bgn.
+            </p>
+            <button class="action-button">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="action-button__text">Checkout</span>
+            </button>
+          </div>
+        </div>
+        <div class="product-category__item" href="../product/product.html">
+          <img
+            class="product-category__item-thumbnail"
+            src="http://placekitten.com/220/220"
+            alt=""
+          />
+          <h1 class="product-category__item-title">
+            Nulla pellentesque vulputate blandit. Morbi.
+          </h1>
+          <div class="product-category__item-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <small class="product-category__item-rating-small">(15)</small>
+          </div>
+          <div class="product-category-item-content">
+            <p class="product-category__item-content-price">
+              74<sup>99</sup>bgn.
+            </p>
+            <button class="action-button">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="action-button__text">Checkout</span>
+            </button>
+          </div>
+        </div>
+        <div class="product-category__item" href="../product/product.html">
+          <img
+            class="product-category__item-thumbnail"
+            src="http://placekitten.com/220/220"
+            alt=""
+          />
+          <h1 class="product-category__item-title">
+            Nulla pellentesque vulputate blandit. Morbi.
+          </h1>
+          <div class="product-category__item-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <small class="product-category__item-rating-small">(15)</small>
+          </div>
+          <div class="product-category-item-content">
+            <p class="product-category__item-content-price">
+              74<sup>99</sup>bgn.
+            </p>
+            <button class="action-button">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="action-button__text">Checkout</span>
+            </button>
+          </div>
+        </div>
+        <div class="product-category__item" href="../product/product.html">
+          <img
+            class="product-category__item-thumbnail"
+            src="http://placekitten.com/220/220"
+            alt=""
+          />
+          <h1 class="product-category__item-title">
+            Nulla pellentesque vulputate blandit. Morbi.
+          </h1>
+          <div class="product-category__item-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <small class="product-category__item-rating-small">(15)</small>
+          </div>
+          <div class="product-category-item-content">
+            <p class="product-category__item-content-price">
+              74<sup>99</sup>bgn.
+            </p>
+            <button class="action-button">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="action-button__text">Checkout</span>
+            </button>
+          </div>
+        </div>
+        <div class="product-category__item" href="../product/product.html">
+          <img
+            class="product-category__item-thumbnail"
+            src="http://placekitten.com/220/220"
+            alt=""
+          />
+          <h1 class="product-category__item-title">
+            Nulla pellentesque vulputate blandit. Morbi.
+          </h1>
+          <div class="product-category__item-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <small class="product-category__item-rating-small">(15)</small>
+          </div>
+          <div class="product-category-item-content">
+            <p class="product-category__item-content-price">
+              74<sup>99</sup>bgn.
+            </p>
+            <button class="action-button">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="action-button__text">Checkout</span>
+            </button>
+          </div>
+        </div>
+        <div class="product-category__item" href="../product/product.html">
+          <img
+            class="product-category__item-thumbnail"
+            src="http://placekitten.com/220/220"
+            alt=""
+          />
+          <h1 class="product-category__item-title">
+            Nulla pellentesque vulputate blandit. Morbi.
+          </h1>
+          <div class="product-category__item-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <small class="product-category__item-rating-small">(15)</small>
+          </div>
+          <div class="product-category-item-content">
+            <p class="product-category__item-content-price">
+              74<sup>99</sup>bgn.
+            </p>
+            <button class="action-button">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="action-button__text">Checkout</span>
+            </button>
+          </div>
+        </div>
+        <div class="product-category__item" href="../product/product.html">
+          <img
+            class="product-category__item-thumbnail"
+            src="http://placekitten.com/220/220"
+            alt=""
+          />
+          <h1 class="product-category__item-title">
+            Nulla pellentesque vulputate blandit. Morbi.
+          </h1>
+          <div class="product-category__item-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <small class="product-category__item-rating-small">(15)</small>
+          </div>
+          <div class="product-category-item-content">
+            <p class="product-category__item-content-price">
+              74<sup>99</sup>bgn.
+            </p>
+            <button class="action-button">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="action-button__text">Checkout</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
