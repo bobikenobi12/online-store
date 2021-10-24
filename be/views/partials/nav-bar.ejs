@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/common/common.css">
+    <link rel="stylesheet" href="/css/common/nav.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/css/common/popup-menu.css" />
+    <link rel="stylesheet" href="/css/common/action-button.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="primary-nav">
+          <a class="nav-logo" href="/"
+            ><img
+              class="nav-logo-image"
+              src="http://placekitten.com/135/35"
+              alt="logo"
+          /></a>
+          <form class="search-bar">
+            <input
+              class="search-input"
+              type="search"
+              placeholder="What are you looking for?"
+            />
+            <button type="button" class="nav-button">
+              <i class="fas fa-search text-color-blue"></i>
+            </button>
+          </form>
+          <span class="popup-menu">
+            <div class="popup-menu__head">
+              <i class="fas fa-user"></i>
+              <span class="popup-menu__head-title">My account</span>
+              <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="popup-menu__main popup-menu__main--widthchange">
+              <div
+                class="
+                  popup-menu__item
+                  popup-menu__item-header
+                  popup-menu__item-header--left-aligned
+                "
+              >
+                <i class="fas fa-user-tie"></i>
+                <span class="popup-menu__item-text">Sign in to your account!</span>
+              </div>
+              <div class="popup-menu__item popup-menu__item-footer">
+                <div class="width-change">
+                <button class="action-button">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span class="action-button__text">Sign in</span>
+                </button>
+                </div>
+                <a href="/sign-up/sign-up.html" class="popup-menu__item-link"
+                  >New account</a
+                >
+              </div>
+            </div>
+          </span>
+          <span class="popup-menu">
+            <div class="popup-menu__head">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="popup-menu__head-title">Shopping cart</span>
+              <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="popup-menu__main popup-menu__main--right-aligned">
+              <div
+                class="
+                  popup-menu__item popup-menu__item-header popup-menu__item--compact
+                "
+              >
+                No products added to shopping cart
+              </div>
+              <div
+                class="popup-menu__item popup-menu__item-footer popup-menu__item--plain"
+              >
+              <button class="action-button">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="action-button__text">View shopping cart</span>
+              </button>
+              </div>
+            </div>
+          </span>
+        </div>
+        <ul class="secondary-nav">
+          <li class="category-item">
+            <a class="category-link" href="/fe/products/computers/computers.html"
+              >Computers</a
+            >
+          </li>
+          <li class="category-item">
+            <a class="category-link" href="/fe/products/computers/computers.html"
+              >Monitors</a
+            >
+          </li>
+          <li class="category-item">
+            <a class="category-link" href="/fe/products/computers/computers.html"
+              >Laptops</a
+            >
+          </li>
+          <li class="category-item">
+            <a class="category-link" href="/fe/products/computers/computers.html"
+              >Tablets</a
+            >
+          </li>
+          <li class="category-item">
+            <a class="category-link" href="/fe/products/computers/computers.html"
+              >Phones</a
+            >
+          </li>
+          <li class="category-item">
+            <a class="category-link" href="/fe/products/computers/computers.html"
+              >Gaming accesories</a
+            >
+          </li>
+        </ul>
+      </nav>
+</body>
+</html>

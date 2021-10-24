@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/common/common.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/css/product-list.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4d990b3ec8.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Vain</title>
+  </head>
+  <body>
+    <%- include('partials/nav-bar') %>
+    <div class="product-list">
+      <% for (let i = 0; i < 21; i++) { %>
+      <a class="product-list__item" href="/product">
+        <div class="product-list__item-thumbnail">
+          <img src="http://placekitten.com/137/137" alt="" />
+        </div>
+        <div class="product-list__item-title">
+          Nulla pellentesque vulputate blandit. Morbi.
+        </div>
+        <div class="product-list__item-rating">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          5 (15)
+        </div>
+        <p class="product-list__item-price">74<sup>99</sup>bgn</p>
+      </a>
+      <% } %>
+    </div>
+  </body>
+</html>
