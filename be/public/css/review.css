@@ -1,0 +1,158 @@
+.review {
+  margin: 30px auto 0px auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  max-width: 1200px;
+  background-color: #fff;
+}
+.review__section-title {
+  color: rgb(34, 34, 34);
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: block;
+}
+.review__section-small {
+  color: #888888;
+}
+.review__section-separator {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 25px 0px 10px 30px;
+  width: 650px;
+}
+.review > div {
+  padding: 10px 30px;
+}
+.review__head {
+  display: grid;
+  grid-template-areas:
+    "img title"
+    "img desc";
+  color: #444444;
+  grid-column-gap: 20px;
+  justify-content: start;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 30px;
+}
+.review__head-img {
+  grid-area: img;
+}
+.review__head-title {
+  grid-area: title;
+  font-size: 17px;
+  margin-top: 10px;
+}
+.review__head-text {
+  grid-area: desc;
+  color: #0053b8;
+  font-size: 12px;
+  text-decoration: none;
+}
+.review__head-text:hover {
+  text-decoration: underline;
+}
+.review__rating-stars {
+  display: flex;
+  align-items: center;
+}
+.review__rating-stars > .fa {
+  font-size: 32px;
+  color: #ccc;
+}
+.review__rating-stars span {
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.review__description-textarea {
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 50%;
+  padding: 7px 12px;
+  color: #666666;
+  font-size: 14px;
+  font-family: inherit;
+}
+.review__description-textarea:focus {
+  border-color: #66afe9;
+  outline: none;
+}
+.review__title-input {
+  padding: 7px 12px;
+  font-size: 14px;
+  color: #666;
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 50%;
+}
+.review__title-input:focus {
+  border-color: #66afe9;
+  outline: none;
+}
+.review__gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.review__gallery-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.review__gallery-file-selector {
+  border: 2px dashed #ccc;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 16px 20px;
+  margin-left: 5px;
+  justify-self: flex-start;
+}
+.review__gallery-file-selector:hover {
+  border-color: #a3a3a3;
+}
+.review__gallery-file-selector #gallery {
+  display: none;
+}
+.review__gallery-image {
+  position: relative;
+  width: 62px;
+  height: 62px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("http://placekitten.com/500/300");
+}
+.review__gallery-image i {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 14px;
+  line-height: 0.85;
+  padding: 3px;
+  border-radius: 3px;
+  background-color: #EF2809;
+  color: #fff;
+  cursor: pointer;
+}
+.review__gallery-image i:hover {
+  transform: scale(1.2);
+}
+.review__buttons {
+  margin-bottom: 40px;
+}
+.review__buttons-cancel {
+  padding: 5px 10px;
+  color: #005eb8;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 12px;
+  border: none;
+  background-color: #fff;
+}
+.review__buttons-cancel:hover {
+  text-decoration: underline;
+}
