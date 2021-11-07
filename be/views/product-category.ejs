@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/common/common.css" />
+    <link rel="stylesheet" href="/css/common/action-button.css" />
+    <link rel="stylesheet" href="/css/common/primary-button.css" />
+    <link rel="stylesheet" href="/css/productcategory.css" />
+    <link rel="stylesheet" href="/css/common/components/accordeon/accordeon.css" />
+    <title>Vain | product_category</title>
+    <script
+      src="https://kit.fontawesome.com/4d990b3ec8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/accordeon.js" defer></script>
+  </head>
+  <body>
+    <%- include('partials/nav-bar') %>
+    <main class="product-category">
+      <div class="product-category__listing">
+        <div class="product-category__listing-heading">
+          <p class="product-category__listing-heading-title">Computers</p>
+          <span class="product-category__listing-heading-products">5088</span>
+        </div>
+        <hr class="product-section__separator" />
+      </div>
+
+      <div class="product-category__filters">
+        <select data-accordeon data-accordeon-label="ghiodaghuifvyhuiadiohhboads">
+          <option value="New models">New models (4773)</option>
+          <option value="In stock">In stock (4767)</option>
+          <option value="Special offers">Special offers (1136)</option>
+          <option value="Unpacked">Unpacked (41)</option>
+        </select>
+        <select data-accordeon data-accordeon-label="Availability">
+          <option value="New models">New models (4773)</option>
+          <option value="In stock">In stock (4767)</option>
+          <option value="Special offers">Special offers (1136)</option>
+          <option value="Unpacked">Unpacked (41)</option>
+        </select>
+      </div>
+      <div class="product-category__items">
+        <% for(let i=1; i<=15; i++) { %>
+          <div class="product-category__item" href="../product/product.html">
+          <img
+            class="product-category__item-thumbnail"
+            src="http://placekitten.com/220/220"
+            alt=""
+          />
+          <h1 class="product-category__item-title">
+            Nulla pellentesque vulputate blandit. Morbi.
+          </h1>
+          <div class="product-category__item-rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <small class="product-category__item-rating-small">(15)</small>
+          </div>
+          <div class="product-category-item-content">
+            <p class="product-category__item-content-price">
+              74<sup>99</sup>bgn.
+            </p>
+            <button class="action-button" onclick="location.href='#'">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="action-button__text">Checkout</span>
+            </button>
+          </div>
+        </div>
+     <%   }   %>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
