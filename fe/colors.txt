@@ -1,0 +1,7 @@
+progress bar colors:
+#70be1a
+#b0cb1e
+#fbae06
+#f9bf3b
+#db7b25
+#ccc

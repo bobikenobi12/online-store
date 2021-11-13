@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/common/common.css">
+    <link rel="stylesheet" href="/css/signup.css" />
+    <script
+      src="https://kit.fontawesome.com/4d990b3ec8.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Vain signup</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="sign-up">
+      <div class="sign-up__header">
+        <h1 class="sign-up__header-title">VAIN</h1>
+        <form action="/sign-up" method="post">
+          <div class="sign-up__form">
+            <h2 class="sign-up__form-title">Sign up to start shopping.</h2>
+            <button class="sign-up__form-button sign-up__form-button--primary">
+              <i class="fab fa-facebook-square"></i>
+              Sign in with Facebook
+            </button>
+            <div class="sign-up__form-separator">
+              <div class="sign-up__form-separator-line"></div>
+              <span class="sign-up__form-separator-text">OR</span>
+              <div class="sign-up__form-separator-line"></div>
+            </div>
+            <input
+             
+              placeholder="Email"
+              class="sign-up__form-input"
+              name="email"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              class="sign-up__form-input"
+              name="password"
+            />
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              class="sign-up__form-input"
+              name="confirmPassword"
+            />
+            <button
+              type="submit"
+              class="
+                sign-up__form-button
+                sign-up__form-button--secondary
+              "
+            >
+              <div class="sign-up__form-button-text">Sign up</div>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div>
+          <p class="sign-up__footer">
+            Have an account?
+            <a class="sign-up__link" href="/sign-in"
+              >Sign in</a
+            >
+          </p>
+      </div>
+    </div>
+  </body>
+</html>

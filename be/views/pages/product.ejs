@@ -1,0 +1,211 @@
+<%- include('../partials/head-start-partial') %>
+    <link rel="stylesheet" href="/css/common/components/dropdown-filters/dropdown-filters.css">
+    <link rel="stylesheet" href="/css/product.css" />
+    <script src="/js/dropdown-filters.js" defer></script>
+    <%- include('../partials/head-end-partial') %>
+
+    <%- include('../partials/body-start-partial') %>
+    <main class="product">
+      <div class="product-container">
+        <h1 class="product-container__head">
+          Акумулаторна бормашина Steinhaus Start, PRO-CD144B, 20 Nm, 550 об/мин,
+          акумулатор 14.4 V 1.3 Ah Li-Ion, Бързозатягащ патронник 10 мм, 7
+          аксесоари, Пластмасова кутия
+        </h1>
+        <div class="product-container__body">
+          <img
+            src="http://placekitten.com/476/476"
+            alt=""
+            class="product-container__body-img"
+          />
+          <div class="product-container__body-highlight">
+            <div class="product-container__body-highlight-rating">
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <span class="product-container__body-highlight-rating-text"
+                >5.00</span
+              >
+              <a
+                href="/review"
+                class="product-container__body-highlight-rating-review"
+                >21 reviews</a
+              >
+            </div>
+            <div class="product-container__body-highlight-pricing">
+              <p class="product-container__body-highlight-pricing-text">
+                <span>99</span
+                ><sup class="product-container__body-highlight-pricing-decimal"
+                  >99</sup
+                >
+                bgn.
+              </p>
+              <span class="product-container__body-highlight-pricing-stock"
+                >In stock</span
+              >
+            </div>
+            <button class="action-button" onclick="location.href='/#'">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="action-button__text">Checkout</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="review-container">
+        <h2 class="review-container__title">
+          Reviews
+          <small class="review-container__title-small">(26 reviews)</small>
+        </h2>
+        <hr class="review-section__separator" />
+        <div class="review-container__rating">
+          <div class="review-container__rating-data">
+            <p class="review-container__rating-data-overall">4.37</p>
+            <div class="review-container__rating-data-stars">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+            </div>
+            <small class="review-container__rating-data-overall-small"
+              >132 reviews</small
+            >
+          </div>
+          <div class="review-container__rating-summary">
+            <div class="review-container__rating-summary-stars">
+              <a href="#">5 stars</a>
+              <a href="#">4 stars</a>
+              <a href="#">3 stars</a>
+              <a href="#">2 stars</a>
+              <a href="#">1 star</a>
+            </div>
+            <div class="review-container__rating-summary-progress">
+              <div>
+                <div></div>
+              </div>
+              <div>
+                <div></div>
+              </div>
+              <div>
+                <div></div>
+              </div>
+              <div>
+                <div></div>
+              </div>
+              <div>
+                <div></div>
+              </div>
+            </div>
+            <div class="review-container__rating-summary-reviews">
+              <a href="#">(20)</a>
+              <a href="#">(2)</a>
+              <a href="#">(2)</a>
+              <a href="#">(0)</a>
+              <a href="#">(2)</a>
+            </div>
+          </div>
+          <div class="review-container__rating-add-review">
+            <p class="review-container__rating-add-review-question">
+              Do you have the product or have you used it?
+            </p>
+            <p class="review-container__rating-add-review-text">
+              Choose a star to rate the product
+            </p>
+            <div class="review-container__rating-add-review-stars">
+              <button
+                class="
+                  review-container__rating-add-review-stars-button
+                  fa fa-star
+                  checked
+                "
+              ></button>
+              <button
+                class="
+                  review-container__rating-add-review-stars-button
+                  fa fa-star
+                  checked
+                "
+              ></button>
+              <button
+                class="
+                  review-container__rating-add-review-stars-button
+                  fa fa-star
+                  checked
+                "
+              ></button>
+              <button
+                class="
+                  review-container__rating-add-review-stars-button
+                  fa fa-star
+                  checked
+                "
+              ></button>
+              <button
+                class="
+                  review-container__rating-add-review-stars-button
+                  fa fa-star
+                  checked
+                "
+              ></button>
+              <span class="review-container__rating-add-review-stars-text"
+                >Rate the product</span
+              >
+            </div>
+            <button class="primary-button" onclick="location.href='/review'">Add review</button>
+          </div>
+        </div>
+        <hr class="review-section__separator" />
+        <div class="review-container__options">
+          <label for="sort">Sort by</label>
+          <select data-dropdown id="sort">
+            <option value="Most popular">Most popular</option>
+            <option value="Newest">Newest</option>
+          </select>
+          <label for="sort">Filter</label>
+          <select data-dropdown id="sort">
+            <option value="All reviews">All reviews</option>
+            <option value="5 stars">Reviews with 5 stars</option>
+            <option value="4 stars">Reviews with 4 stars</option>
+            <option value="3 stars">Reviews with 3 stars</option>
+            <option value="2 stars">Reviews with 2 stars</option>
+            <option value="1 star">Reviews with 1 star</option>
+          </select>
+        </div>
+        <hr class="review-section__separator" />
+        <div class="review-container__review">
+          <div class="review-container__review-head">
+            <img
+              src="http://placekitten.com/54/54"
+              alt="thumbnail"
+              class="review-container__review-head-thumbnail"
+            />
+            <p class="review-container__review-head-name">Petar Metodiev</p>
+            <p class="review-container__review-head-date">22 feb. 2021</p>
+          </div>
+          <div class="review-container__review-body">
+            <p class="review-container__review-body-title">
+              Wouldn't recommend
+            </p>
+            <div class="review-container__review-body-stars">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+            </div>
+            <p class="review-container__review-description">
+              This monitor sucks and i want a refund asap or else i will do some
+              bad things!!!!!!!!!
+            </p>
+            <div class="review-container__review-body-attributes">
+              <i class="far fa-thumbs-up"></i>
+              <span>5</span>
+            </div>
+          </div>
+        </div>
+        <hr class="review-section__separator" />
+      </div>
+    </main>
+    <%- include('../partials/body-end-partial') %>
