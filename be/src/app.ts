@@ -1,32 +1,70 @@
 import express from "express";
 import path from "path";
 import ejs from "ejs";
+import multer from "multer";
+const upload = multer({ dest: "uploads/" });
+import { Pool, Client } from "pg";
+import { fileURLToPath } from "url";
+
+const pool = new Pool({
+  host: "localhost",
+  user: "postgres",
+  password: "20070712",
+  database: "postgres",
+  port: 5432,
+  max: 20,
+  // connectionTimeoutMillis: 0,
+  // idleTimeoutMillis: 0
+});
 
 const ROOT_DIR = path.join(__dirname, "..");
 const app = express();
-const port =  3000;
+const port = 3000;
 
 app.set("view engine", "ejs");
 
 app.use(express.urlencoded({ extended: false }));
 app.use("/css", express.static(path.join(ROOT_DIR, "/public/css")));
 app.use("/images", express.static(path.join(ROOT_DIR, "/public/images")));
-app.use('/js', express.static(path.join(ROOT_DIR, "/public/js")));
+app.use("/js", express.static(path.join(ROOT_DIR, "/public/js")));
 
 app.get("/", (req, res) => {
-  res.render("pages/home");
+  pool
+    .query(`SELECT * FROM PRODUCTS`)
+    .then((results) => res.render("pages/home", { products: results.rows }))
+    .catch((err) => {
+      throw err;
+    });
 });
 
-app.get('/product', (req, res) => {
-  res.render('pages/product');
+app.get("/product", (req, res) => {
+  res.render("pages/product");
 });
 
-app.get('/review', (req, res) => {
-  res.render('pages/review');
+app.get("/review", (req, res) => {
+  res.render("pages/review");
 });
-
+app.post("/review", (req, res) => {
+  // const rating = req.body.rating;
+  const review_description = req.body.review_description;
+  const review_title = req.body.review_title;
+  const images = req.body.images;
+  if (!review_title || !review_description)
+    res.render("pages/review", {
+      reviewDescription: review_description,
+      reviewTitle: review_title,
+    });
+  else {
+    pool
+      .query(
+        `INSERT INTO REVIEWS(review_description, review_title) VALUES('${review_description}', '${review_title}')`
+      )
+      .then((results) => res.redirect("/"))
+      .catch((err) => res.render("pages/sign-up"));
+  }
+});
 app.get("/sign-in", (req, res) => {
-  res.render('sign-in');
+  res.render("pages/sign-in");
 });
 
 app.post("/sign-in", (req, res) => {
@@ -37,35 +75,70 @@ app.post("/sign-in", (req, res) => {
 });
 
 app.get("/forgot-password", (req, res) => {
-  res.render('forgot-password');
+  res.render("pages/forgot-password");
 });
 
 app.get("/sign-up", (req, res) => {
-  res.render('sign-up');
+  res.render("pages/sign-up");
 });
 
 app.post("/sign-up", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
   const confirmPassword = req.body.confirmPassword;
-  // if(password!=confirmPassword) {
-
-  // }
   console.log(email, password);
-  res.redirect("/");
+  if (password !== confirmPassword) {
+    res.render("pages/sign-up");
+    console.log("INVALID PASSWORD!");
+  } else {
+    pool
+      .query(`INSERT INTO users VALUES('${email}', '${password}')`)
+      .then((results) => res.redirect("/"))
+      .catch((err) => res.render("pages/sign-up"));
   }
 });
+app.get("/shopping-cart", (req, res) => {
+  res.render("pages/cart");
+});
 
-app.get('/shopping-cart', (req, res) => {
-  res.render('pages/cart');
-})
-
-app.get('/product-category', (req, res) => {
-  res.render('pages/product-category');
-})
+app.get("/product-category", (req, res) => {
+  res.render("pages/product-category");
+});
+app.get("/create-product", (req, res) => {
+  res.render("pages/create-product", {
+    name: "",
+    description: "",
+    price: "",
+    showAlert: false,
+  });
+});
+app.post("/create-product", upload.array("images", 3), (req, res) => {
+  const { name, description, price } = req.body;
+  const photos = req.files as any[];
+  const filenames = photos
+    .filter((photo) => photo.fieldname === "images")
+    .map((photo) => photo.filename);
+  console.log(name, description, price, photos);
+  if (!name || !description || !price || !photos) {
+    res.render("pages/create-product", {
+      name: name || "",
+      description: description || "",
+      price: price || "",
+      showAlert: true,
+    });
+  }
+  // else {
+  //   pool
+  //     .query(
+  //       `INSERT INTO products(name, description, price, images) VALUES('${name}', '${description}', ${price}, '{${photo_paths}}');`
+  //     )
+  //     .then((results) => res.redirect("/"))
+  //     .catch((err) => console.error(err));
+  // }
+});
 app.use((err, req, res, next) => {
   res.status(err.status || 500);
-  res.render('pages/404', { error: err });
+  res.render("pages/404", { error: err });
 });
 
 app.listen(port, () => {
