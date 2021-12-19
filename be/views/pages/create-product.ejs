@@ -46,20 +46,30 @@
     value="<%= price %>"
   />
   <label for="gallery" class="product-form__label product-form__label--images"
-    >Gallery:</label
+    >Main image:</label
   >
   <input
     required
     enctype="multipart/form-data"
     id="gallery"
     type="file"
-    name="images"
-    accept=".png, .jpg, .jpeg, .pdf"
+    name="main-image"
+    accept=".png, .jpg, .jpeg"
     class="product-form__images"
   />
-  <div class="product-form__preview">
-    <p>No files currently selected for upload</p>
-  </div>
+  <label for="gallery" class="product-form__label product-form__label--images"
+  >Secondary images(up to 5):</label
+>
+<input
+  required
+  enctype="multipart/form-data"
+  id="gallery"
+  type="file"
+  name="secondary-images"
+  multiple
+  accept=".png, .jpg, .jpeg"
+  class="product-form__images"
+/>
   <button type="submit" class="primary-button">Add product</button>
 </form>
 <%- include('../partials/body-end-partial') %>

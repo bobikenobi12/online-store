@@ -8,13 +8,11 @@
     <main class="product">
       <div class="product-container">
         <h1 class="product-container__head">
-          Акумулаторна бормашина Steinhaus Start, PRO-CD144B, 20 Nm, 550 об/мин,
-          акумулатор 14.4 V 1.3 Ah Li-Ion, Бързозатягащ патронник 10 мм, 7
-          аксесоари, Пластмасова кутия
+          <%= name %>
         </h1>
         <div class="product-container__body">
           <img
-            src="http://placekitten.com/476/476"
+            src="uploads\<%= images[0] %>"
             alt=""
             class="product-container__body-img"
           />
@@ -26,7 +24,7 @@
               <i class="fa fa-star checked"></i>
               <i class="fa fa-star checked"></i>
               <span class="product-container__body-highlight-rating-text"
-                >5.00</span
+                ><%= rating %></span
               >
               <a
                 href="/review"
@@ -36,10 +34,7 @@
             </div>
             <div class="product-container__body-highlight-pricing">
               <p class="product-container__body-highlight-pricing-text">
-                <span>99</span
-                ><sup class="product-container__body-highlight-pricing-decimal"
-                  >99</sup
-                >
+                <%= price %>
                 bgn.
               </p>
               <span class="product-container__body-highlight-pricing-stock"
@@ -61,7 +56,7 @@
         <hr class="review-section__separator" />
         <div class="review-container__rating">
           <div class="review-container__rating-data">
-            <p class="review-container__rating-data-overall">4.37</p>
+            <p class="review-container__rating-data-overall"><%= rating %></p>
             <div class="review-container__rating-data-stars">
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>

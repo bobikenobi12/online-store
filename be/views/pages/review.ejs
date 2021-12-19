@@ -15,6 +15,7 @@
           >Petar robot 65 gdjoaspghbadiogbdhiasvbghadi</a
         >
       </div>
+      <form action="/review" method="post">
       <div>
         <h2 class="review__section-title">Rating</h2>
         <div class="review__rating-stars">
@@ -29,7 +30,7 @@
       <div>
         <label for="textarea" class="review__section-title">Review:</label>
         <textarea
-          name="review-desc"
+          name="review_description"
           id="textarea"
           rows="10"
           class="review__description-textarea"
@@ -42,6 +43,7 @@
         >
         <input
           type="text"
+          name="review_title"
           id="title"
           class="review__title-input"
           placeholder="Write a title of your choice"
@@ -56,6 +58,7 @@
             <input
               id="gallery"
               type="file"
+              name="images"
               accept=".png, .jpg, .jpeg, .gif"
               multiple
             />
@@ -66,8 +69,9 @@
       </div>
       <hr class="review__section-separator" />
       <div class="review__buttons">
-        <button class="primary-button" onclick="location.href='/'">Add review</button>
+        <button type="submit" class="primary-button" onclick="location.href='/'">Add review</button>
         <button class="review__buttons-cancel">Cancel</button>
       </div>
+    </form>
     </main>
     <%- include('../partials/body-end-partial') %>

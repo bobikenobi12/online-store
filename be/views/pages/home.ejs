@@ -1,17 +1,12 @@
 <%- include('../partials/head-start-partial') %>
 <link rel="stylesheet" href="/css/product-list.css" />
-<%- include('../partials/head-end-partial') %>
-
+<%- include('../partials/head-end-partial') %> 
 <%- include('../partials/body-start-partial') %>
 <div class="product-list">
-  <% for (let i = 1; i <= 20; i++) { %>
-  <a class="product-list__item" href="/product">
-    <div class="product-list__item-thumbnail">
-      <img src="http://placekitten.com/137/137" alt="" />
-    </div>
-    <div class="product-list__item-title">
-      Nulla pellentesque vulputate blandit. Morbi.
-    </div>
+  <% for (let i=0;i<products.length;i++) { %>
+  <a class="product-list__item" href="/product/<%= products[i].id %>">
+      <img src="uploads\<%= products[i].images[0] %>" alt="" class="product-list__item-thumbnail"/>
+    <div class="product-list__item-title"><%= products[i].name %></div>
     <div class="product-list__item-rating">
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
@@ -20,7 +15,7 @@
       <span class="fa fa-star checked"></span>
       5 (15)
     </div>
-    <p class="product-list__item-price">74<sup>99</sup>bgn</p>
+    <p class="product-list__item-price"><%= products[i].price %>bgn</p>
   </a>
   <% } %>
 </div>
