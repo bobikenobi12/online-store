@@ -1,36 +1,38 @@
 <%- include('../partials/head-start-partial') %>
     <link rel="stylesheet" href="/css/review.css" />
+    <script src="/js/review.js" defer></script>
     <%- include('../partials/head-end-partial') %>
 
     <%- include('../partials/body-start-partial') %>
     <main class="review">
       <div class="review__head">
         <img
-          src="http://placekitten.com/75/75"
+          src="/uploads/<%= images[0] %>"
           alt=""
           class="review__head-img"
         />
         <h1 class="review__head-title">Add review for:</h1>
-        <a href="/product" class="review__head-text"
-          >Petar robot 65 gdjoaspghbadiogbdhiasvbghadi</a
+        <a href="/product/<%= id %>" class="review__head-text"
+          ><%= name %></a
         >
       </div>
-      <form action="/review" method="post">
+      <form action="/review/<% id %>" method="post" class="review__section"  enctype="multipart/form-data">
       <div>
         <h2 class="review__section-title">Rating</h2>
+        <input type="number" name="rating" class="review__rating-stars--input">
         <div class="review__rating-stars">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
+          <i class="review__rating-stars--star far fa-star"></i>
+          <i class="review__rating-stars--star far fa-star"></i>
+          <i class="review__rating-stars--star far fa-star"></i>
+          <i class="review__rating-stars--star far fa-star"></i>
+          <i class="review__rating-stars--star far fa-star"></i>
           <span>Rate the product</span>
         </div>
       </div>
       <div>
-        <label for="textarea" class="review__section-title">Review:</label>
+        <label for="textarea" class="review__section-title">Review: <small class="review__section-small">(optional)</small></label>
         <textarea
-          name="review_description"
+          name="description"
           id="textarea"
           rows="10"
           class="review__description-textarea"
@@ -43,7 +45,7 @@
         >
         <input
           type="text"
-          name="review_title"
+          name="title"
           id="title"
           class="review__title-input"
           placeholder="Write a title of your choice"
@@ -69,7 +71,7 @@
       </div>
       <hr class="review__section-separator" />
       <div class="review__buttons">
-        <button type="submit" class="primary-button" onclick="location.href='/'">Add review</button>
+        <button class="primary-button">Add review</button>
         <button class="review__buttons-cancel">Cancel</button>
       </div>
     </form>

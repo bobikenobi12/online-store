@@ -44,6 +44,7 @@ app.get("/product/:productId", (req, res) => {
     .query(`SELECT * FROM products WHERE id=${id};`)
     .then((results) =>
       res.render("pages/product", {
+        id: results.rows[0].id,
         name: results.rows[0].name,
         description: results.rows[0].description,
         price: results.rows[0].price,
@@ -55,29 +56,43 @@ app.get("/product/:productId", (req, res) => {
       throw err;
     });
 });
-
-app.get("/review", (req, res) => {
-  res.render("pages/review");
-});
-app.post("/review", (req, res) => {
-  // const rating = req.body.rating;
-  const review_description = req.body.review_description;
-  const review_title = req.body.review_title;
-  const images = req.body.images;
-  if (!review_title || !review_description)
-    res.render("pages/review", {
-      reviewDescription: review_description,
-      reviewTitle: review_title,
+app.get("/review/:productId", (req, res) => {
+  const id = req.params.productId;
+  pool
+    .query(`SELECT * FROM products WHERE id=${id};`)
+    .then((results) =>
+      res.render("pages/review", {
+        id: results.rows[0].id,
+        name: results.rows[0].name,
+        images: results.rows[0].images
+      })
+    )
+    .catch((err) => {
+      throw err;
     });
+});
+
+app.post("/review/:productId", upload.array('photos', 5), (req, res) => {
+  const { rating,description, title, id } = req.body;
+  const photos = req.files as any[];
+  const filenames = [];
+  photos.forEach(photo => filenames.push(photo.filename));
+  if (!rating) {
+    res.render("pages/review", {
+      reviewDescription: description,
+      reviewTitle: title,
+    });
+  }
   else {
     pool
       .query(
-        `INSERT INTO REVIEWS(review_description, review_title) VALUES('${review_description}', '${review_title}')`
+        `INSERT INTO reviews (rating, review, title, images, product_id) VALUES(${rating}, '${description}', '${title}, '{${filenames}}, ${id}');`
       )
       .then((results) => res.redirect("/"))
       .catch((err) => res.render("pages/sign-up"));
   }
-});
+})
+
 app.get("/sign-in", (req, res) => {
   res.render("pages/sign-in");
 });

@@ -14,7 +14,7 @@ body {
 .product-container {
   display: grid;
   grid-template-rows: repeat(2, auto);
-  grid-template-columns: 1240px;
+  max-width: 1200px;
   color: #222222;
 }
 .product-container__head {
@@ -27,16 +27,21 @@ body {
 }
 .product-container__body {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 300px auto;
+  grid-template-rows: 300px;
+  gap: 25px;
   align-items: start;
-  justify-content: start;
 }
 .product-container__body-img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
   padding: 0px 10px;
 }
 .product-container__body-highlight {
   display: grid;
   grid-template-rows: repeat(3, auto);
+  justify-self: start;
   padding: 0px 10px;
 }
 .product-container__body-highlight-rating {

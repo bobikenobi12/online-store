@@ -5,7 +5,7 @@
 <div class="product-list">
   <% for (let i=0;i<products.length;i++) { %>
   <a class="product-list__item" href="/product/<%= products[i].id %>">
-      <img src="uploads\<%= products[i].images[0] %>" alt="" class="product-list__item-thumbnail"/>
+      <img src="/uploads/<%= products[i].images[0] %>" alt="" class="product-list__item-thumbnail"/>
     <div class="product-list__item-title"><%= products[i].name %></div>
     <div class="product-list__item-rating">
       <span class="fa fa-star checked"></span>

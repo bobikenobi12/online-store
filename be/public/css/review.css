@@ -22,7 +22,7 @@
   margin: 25px 0px 10px 30px;
   width: 650px;
 }
-.review > div {
+.review__section > div {
   padding: 10px 30px;
 }
 .review__head {
@@ -32,17 +32,21 @@
     "img desc";
   color: #444444;
   grid-column-gap: 20px;
+  align-items: center;
   justify-content: start;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 10px 30px;
 }
 .review__head-img {
   grid-area: img;
+  max-width: 70px;
+  max-height: 50px;
+  margin: 15px 0px;
 }
 .review__head-title {
   grid-area: title;
   font-size: 17px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .review__head-text {
   grid-area: desc;
@@ -57,9 +61,13 @@
   display: flex;
   align-items: center;
 }
-.review__rating-stars > .fa {
-  font-size: 32px;
-  color: #ccc;
+.review__rating-stars--input {
+  display: none;
+}
+.review__rating-stars--star {
+  font-size: 25px;
+  cursor: pointer;
+  color: #dabd18;
 }
 .review__rating-stars span {
   padding-left: 10px;

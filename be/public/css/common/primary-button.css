@@ -6,6 +6,7 @@
     border-radius: 3px;
     border: none;
     line-height: 20px;
+    text-decoration: none;
   }
   .primary-button:hover {
     cursor: pointer;

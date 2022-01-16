@@ -12,7 +12,7 @@
         </h1>
         <div class="product-container__body">
           <img
-            src="uploads\<%= images[0] %>"
+            src="/uploads/<%= images[0] %>"
             alt=""
             class="product-container__body-img"
           />
@@ -148,7 +148,7 @@
                 >Rate the product</span
               >
             </div>
-            <button class="primary-button" onclick="location.href='/review'">Add review</button>
+            <a class="primary-button" href="/review/<%= id %>">Add review</a>
           </div>
         </div>
         <hr class="review-section__separator" />
