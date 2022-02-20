@@ -30,13 +30,71 @@ app.use("/js", express.static(path.join(ROOT_DIR, "/public/js")));
 app.use("/uploads", express.static(path.join(ROOT_DIR, "/public/uploads")));
 
 app.get("/", (req, res) => {
+  const term = req.query.term || '';
   pool
-    .query(`SELECT * FROM products`)
-    .then((results) => res.render("pages/home", { products: results.rows }))
+    .query(`SELECT * FROM products WHERE LOWER(name) LIKE LOWER('%${term}%')`)
+    .then((results) => res.render("pages/home", { products: results.rows, length: results.rows.length, term }))
     .catch((err) => {
       throw err;
     });
 });
+
+app.get("/search", (req, res) => {
+  const term = req.query.term;
+  const query = !term
+    ? `SELECT * FROM products limit 5`
+    : `SELECT * FROM products WHERE LOWER(name) LIKE LOWER('%${term}%')`;
+
+  pool
+    .query(query)
+    .then((results) => {
+      res.send({ results: results.rows });
+    })
+    .catch((err) => {
+      throw err;
+    });
+});
+
+// app.get("/query", (req, res) => {
+//   const value = req.query.value;
+//   const name = req.query.name;
+//   let query;
+//   if (!name && value) {
+//     query = `SELECT * FROM products WHERE LOWER(name) LIKE LOWER('%${value}%')`;
+//     pool
+//       .query(query)
+//       .then((results) => {
+//         res.render("pages/search", {
+//           products: results.rows,
+//           length: results.rows.length,
+//           term: value,
+//         });
+//       })
+//       .catch((err) => {
+//         throw err;
+//       });
+//   } else if (!query && name) {
+//     query = `SELECT * FROM products WHERE name=${name})`;
+//     pool
+//       .query(query)
+//       .then((results) => {
+//         res.redirect(`/products/${results.rows[0].id}`)
+//       })
+//       .catch((err) => {
+//         throw err;
+//       });
+//   } else {
+//     query = `SELECT * FROM products`;
+//     pool
+//       .query(query)
+//       .then((results) => {
+//         res.redirect
+//       })
+//       .catch((err) => {
+//         throw err;
+//       });
+//   }
+// });
 
 app.get("/product/:productId", (req, res) => {
   const id = req.params.productId;
@@ -56,6 +114,7 @@ app.get("/product/:productId", (req, res) => {
       throw err;
     });
 });
+
 app.get("/review/:productId", (req, res) => {
   const id = req.params.productId;
   pool
@@ -64,7 +123,7 @@ app.get("/review/:productId", (req, res) => {
       res.render("pages/review", {
         id: results.rows[0].id,
         name: results.rows[0].name,
-        images: results.rows[0].images
+        images: results.rows[0].images,
       })
     )
     .catch((err) => {
@@ -72,18 +131,17 @@ app.get("/review/:productId", (req, res) => {
     });
 });
 
-app.post("/review/:productId", upload.array('photos', 5), (req, res) => {
-  const { rating,description, title, id } = req.body;
+app.post("/review/:productId", upload.array("photos", 5), (req, res) => {
+  const { rating, description, title, id } = req.body;
   const photos = req.files as any[];
   const filenames = [];
-  photos.forEach(photo => filenames.push(photo.filename));
+  photos.forEach((photo) => filenames.push(photo.filename));
   if (!rating) {
     res.render("pages/review", {
       reviewDescription: description,
       reviewTitle: title,
     });
-  }
-  else {
+  } else {
     pool
       .query(
         `INSERT INTO reviews (rating, review, title, images, product_id) VALUES(${rating}, '${description}', '${title}, '{${filenames}}, ${id}');`
@@ -91,7 +149,7 @@ app.post("/review/:productId", upload.array('photos', 5), (req, res) => {
       .then((results) => res.redirect("/"))
       .catch((err) => res.render("pages/sign-up"));
   }
-})
+});
 
 app.get("/sign-in", (req, res) => {
   res.render("pages/sign-in");
